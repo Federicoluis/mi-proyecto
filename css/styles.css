@@ -1,0 +1,249 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none; }
+
+.pseudoBody {
+  background-image: url("../multimedia/backbody1.jpg");
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  opacity: 0.5;
+  width: 100vw;
+  height: 90vh; }
+  .pseudoBody h1 {
+    font-family: "Cormorant Upright", serif;
+    color: #59981a;
+    text-shadow: 0.2vw 0.2vh #ecf87f;
+    font-size: 7vw;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center; }
+
+header {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2vh 0 5vh 0;
+  display: flex; }
+  header .header__titulo {
+    font-family: "Cormorant Upright", serif;
+    font-weight: bold;
+    font-size: 3vw;
+    color: #5a9a2d;
+    text-transform: capitalize;
+    padding: 1vw;
+    text-align: center;
+    text-shadow: #ecf87f;
+    animation: aparecer 5s ease-in-out infinite; }
+
+@keyframes aparecer {
+  0% {
+    color: #59981a; }
+  25% {
+    color: #ecf87f; }
+  50% {
+    color: #5a9a2d; }
+  100% {
+    color: #59981a; } }
+
+nav {
+  width: 100vw;
+  height: 10vh;
+  margin: 1vh 3vw 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; }
+  nav a {
+    font-family: "Cormorant Upright", serif;
+    font-weight: bold;
+    color: #5a9a2d;
+    font-size: 1.8vw;
+    text-transform: capitalize;
+    text-align: center;
+    margin-left: 0.5vw;
+    transition: transform 1s; }
+  nav a:hover {
+    border-bottom: 4px solid #ecf87f;
+    text-decoration: none;
+    color: #59981a;
+    transform: translateY(-1.2vh); }
+
+.imagenBack {
+  background-image: url("../multimedia/background.jpg");
+  background-size: cover;
+  background-position: top;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #5a9a2d; }
+  .imagenBack h1 {
+    font-family: "Cormorant Upright", serif;
+    color: #59981a;
+    text-shadow: 0.2vw 0.2vh #ecf87f;
+    font-size: 7vw;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center; }
+
+.sectionP {
+  padding: 7vh 2vw; }
+  .sectionP .sectionP__texto {
+    color: #5a9a2d; }
+
+p {
+  font-family: "Cormorant Upright", serif;
+  color: #5a9a2d;
+  font-size: 1.5vw;
+  word-spacing: 0.1vw;
+  line-height: 2vw;
+  text-align: center; }
+
+ul li {
+  color: #5a9a2d; }
+
+ol li {
+  color: #5a9a2d; }
+
+.imagenTabla {
+  display: flex;
+  justify-content: center; }
+  .imagenTabla .imagenTabla__imagen {
+    animation: resaltar 2s; }
+
+@keyframes resaltar {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
+
+.tituloTabla {
+  font-family: "Cormorant Upright", serif;
+  font-size: 1.5vw;
+  color: #5a9a2d; }
+
+.cuerpoTabla {
+  font-family: "Cormorant Upright", serif;
+  font-size: 1.5vw;
+  color: #5a9a2d;
+  border-top: solid 5px #5a9a2d;
+  border-right: solid 10px #5a9a2d;
+  border-bottom: solid 7px #5a9a2d;
+  border-left: solid 12px #5a9a2d; }
+
+.estetica1 {
+  background-image: url("images/estetica1.jpg"); }
+
+.estetica2 {
+  background-image: url("images/estetica2.jpg"); }
+
+.estetica3 {
+  background-image: url("images/estetica3.jpg"); }
+
+.estetica4 {
+  background-image: url("images/estetica4.jpg"); }
+
+.estetica5 {
+  background-image: url("images/estetica5.jpg"); }
+
+form {
+  font-family: "Cormorant Upright", serif;
+  font-size: 5vh;
+  margin: 10vh 20vw 10vh;
+  color: #59981a; }
+
+footer {
+  background: #59981a;
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  footer p, footer .listaFooter {
+    font-family: "Cormorant Upright", serif;
+    font-size: 1.2vw;
+    color: white;
+    list-style: none; }
+
+.divBody {
+  background-color: #81b622;
+  border-radius: 8px;
+  height: 62vh; }
+
+.infoImportant {
+  padding: 2vw; }
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.estetica1 {
+  width: 20vw;
+  height: 50vh;
+  opacity: 0;
+  animation: aparecer2 6s ease-in infinite; }
+
+.estetica2 {
+  width: 20vw;
+  height: 50vh;
+  opacity: 0;
+  animation: aparecer3 6s ease-in infinite; }
+
+.estetica3 {
+  width: 20vw;
+  height: 50vh;
+  opacity: 0;
+  animation: aparecer2 6s ease-in infinite; }
+
+@keyframes aparecer2 {
+  0% {
+    /* 0s */
+    opacity: 0; }
+  18% {
+    /* 1s */
+    opacity: 1; }
+  33% {
+    /* 2s */
+    opacity: 1; }
+  66% {
+    /* 4s */
+    opacity: 0; }
+  100% {
+    /* 6s */
+    opacity: 0; } }
+
+@keyframes aparecer3 {
+  0% {
+    /* 0s */
+    opacity: 0; }
+  33% {
+    /* 2s */
+    opacity: 0; }
+  48% {
+    /* 3s */
+    opacity: 1; }
+  66% {
+    /* 4s */
+    opacity: 1; }
+  84% {
+    /* 5s */
+    opacity: 0; }
+  100% {
+    /* 6s */
+    opacity: 0; } }
+
+.seccionCentro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
