@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +7,7 @@
   text-decoration: none; }
 
 .pseudoBody {
-  background-image: url("../multimedia/backbody1.jpg");
+  background-image: url("../multimedia/venus-legacy-3.jpg");
   background-repeat: no-repeat;
   background-position: cover;
   background-size: 100vw 100vh;
@@ -16,8 +17,8 @@
   height: 90vh; }
   .pseudoBody h1 {
     font-family: "Cormorant Upright", serif;
-    color: #59981a;
-    text-shadow: 0.2vw 0.2vh #ecf87f;
+    color: #81B622;
+    text-shadow: 0.2vw 0.2vh #59981A;
     font-size: 7vw;
     font-weight: bold;
     word-spacing: 0.1vw;
@@ -25,32 +26,37 @@
 
 header {
   width: 100vw;
-  height: 20vh;
+  height: 30vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2vh 0 5vh 0;
-  display: flex; }
+  margin: 0 0 5vh 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 100% 0 / 30%;
+  background-image: linear-gradient(135deg, #81B622 10%, #3D550C 100%);
+  box-shadow: inset 0 -0.5em 1em rgba(0, 0, 0, 0.4), 0 0 0 2px #ECF87F, 0.5em 0.5em 2.5em black; }
   header .header__titulo {
     font-family: "Cormorant Upright", serif;
     font-weight: bold;
-    font-size: 3vw;
-    color: #5a9a2d;
+    font-size: 4vw;
+    word-spacing: 0.1vw;
+    color: #3D550C;
     text-transform: capitalize;
     padding: 1vw;
     text-align: center;
-    text-shadow: #ecf87f;
+    text-shadow: #59981A;
     animation: aparecer 5s ease-in-out infinite; }
 
 @keyframes aparecer {
   0% {
-    color: #59981a; }
+    color: #81B622; }
   25% {
-    color: #ecf87f; }
+    color: #59981A; }
   50% {
-    color: #5a9a2d; }
+    color: #3D550C; }
   100% {
-    color: #59981a; } }
+    color: #81B622; } }
 
 nav {
   width: 100vw;
@@ -62,20 +68,27 @@ nav {
   nav a {
     font-family: "Cormorant Upright", serif;
     font-weight: bold;
-    color: #5a9a2d;
+    color: #ECF87F;
     font-size: 1.8vw;
     text-transform: capitalize;
     text-align: center;
     margin-left: 0.5vw;
-    transition: transform 1s; }
+    transition: transform 1s;
+    border-bottom: 4px solid white;
+    text-decoration: none; }
   nav a:hover {
-    border-bottom: 4px solid #ecf87f;
+    border-bottom: 4px solid #ECF87F;
     text-decoration: none;
-    color: #59981a;
+    color: white;
     transform: translateY(-1.2vh); }
 
+#carouselExampleCaptions {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30% 30% 30% 30% / 20%; }
+
 .imagenBack {
-  background-image: url("../multimedia/background.jpg");
+  background-image: url("../multimedia/venus-legacy-3.jpg");
   background-size: cover;
   background-position: top;
   width: 100vw;
@@ -83,34 +96,38 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #5a9a2d; }
+  border: 1px solid #3D550C; }
   .imagenBack h1 {
     font-family: "Cormorant Upright", serif;
-    color: #59981a;
-    text-shadow: 0.2vw 0.2vh #ecf87f;
+    color: #81B622;
+    text-shadow: 0.2vw 0.2vh #59981A;
     font-size: 7vw;
     font-weight: bold;
     word-spacing: 0.1vw;
     text-align: center; }
 
+.backgroundColor {
+  background-color: #59981A;
+  width: 40vw;
+  height: 45vh;
+  border: none;
+  margin: 3vh 2vw 5vh 2vw; }
+
+.imgUp {
+  width: 30vw;
+  height: 50vh; }
+
 .sectionP {
   padding: 7vh 2vw; }
   .sectionP .sectionP__texto {
-    color: #5a9a2d; }
+    color: #3D550C; }
 
 p {
   font-family: "Cormorant Upright", serif;
-  color: #5a9a2d;
   font-size: 1.5vw;
   word-spacing: 0.1vw;
   line-height: 2vw;
   text-align: center; }
-
-ul li {
-  color: #5a9a2d; }
-
-ol li {
-  color: #5a9a2d; }
 
 .imagenTabla {
   display: flex;
@@ -125,20 +142,6 @@ ol li {
     transform: scale(1); }
   100% {
     transform: scale(1); } }
-
-.tituloTabla {
-  font-family: "Cormorant Upright", serif;
-  font-size: 1.5vw;
-  color: #5a9a2d; }
-
-.cuerpoTabla {
-  font-family: "Cormorant Upright", serif;
-  font-size: 1.5vw;
-  color: #5a9a2d;
-  border-top: solid 5px #5a9a2d;
-  border-right: solid 10px #5a9a2d;
-  border-bottom: solid 7px #5a9a2d;
-  border-left: solid 12px #5a9a2d; }
 
 .estetica1 {
   background-image: url("images/estetica1.jpg"); }
@@ -159,25 +162,7 @@ form {
   font-family: "Cormorant Upright", serif;
   font-size: 5vh;
   margin: 10vh 20vw 10vh;
-  color: #59981a; }
-
-footer {
-  background: #59981a;
-  width: 100vw;
-  height: 30vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center; }
-  footer p, footer .listaFooter {
-    font-family: "Cormorant Upright", serif;
-    font-size: 1.2vw;
-    color: white;
-    list-style: none; }
-
-.divBody {
-  background-color: #81b622;
-  border-radius: 8px;
-  height: 62vh; }
+  color: #81B622; }
 
 .infoImportant {
   padding: 2vw; }
@@ -187,63 +172,66 @@ footer {
   justify-content: center;
   align-items: center; }
 
-.estetica1 {
-  width: 20vw;
-  height: 50vh;
-  opacity: 0;
-  animation: aparecer2 6s ease-in infinite; }
-
-.estetica2 {
-  width: 20vw;
-  height: 50vh;
-  opacity: 0;
-  animation: aparecer3 6s ease-in infinite; }
-
-.estetica3 {
-  width: 20vw;
-  height: 50vh;
-  opacity: 0;
-  animation: aparecer2 6s ease-in infinite; }
-
-@keyframes aparecer2 {
-  0% {
-    /* 0s */
-    opacity: 0; }
-  18% {
-    /* 1s */
-    opacity: 1; }
-  33% {
-    /* 2s */
-    opacity: 1; }
-  66% {
-    /* 4s */
-    opacity: 0; }
-  100% {
-    /* 6s */
-    opacity: 0; } }
-
-@keyframes aparecer3 {
-  0% {
-    /* 0s */
-    opacity: 0; }
-  33% {
-    /* 2s */
-    opacity: 0; }
-  48% {
-    /* 3s */
-    opacity: 1; }
-  66% {
-    /* 4s */
-    opacity: 1; }
-  84% {
-    /* 5s */
-    opacity: 0; }
-  100% {
-    /* 6s */
-    opacity: 0; } }
-
 .seccionCentro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+
+footer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 85% 85% 0 0 / 30%;
+  background: #ECF87F;
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: inset 0 -0.5em 1em rgba(0, 0, 0, 0.4), 0 0 0 2px #59981A, 0.5em 0.5em 2.5em black; }
+  footer .logoTiny {
+    width: 15vw;
+    height: 30vh; }
+  footer div.social-media-links {
+    /* background: $color-inst7; */
+    overflow: hidden;
+    padding-bottom: 4px;
+    text-align: center; }
+    footer div.social-media-links ul {
+      margin: 0;
+      padding: 0; }
+    footer div.social-media-links li {
+      display: inline;
+      margin: 0;
+      padding: 0; }
+    footer div.social-media-links a {
+      border-bottom: 0px solid rgba(0, 0, 0, 0.95);
+      border-radius: 4px;
+      box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
+      display: inline-block;
+      height: 10vh;
+      padding: 20px;
+      position: relative;
+      transition: .2s ease-in;
+      width: 10vw; }
+      footer div.social-media-links a svg {
+        left: 20px;
+        position: absolute;
+        top: 20px;
+        height: 50px;
+        width: 50px; }
+        footer div.social-media-links a svg.glow path, footer div.social-media-links a svg.glow circle {
+          fill: rgba(0, 0, 0, 0); }
+        footer div.social-media-links a svg path, footer div.social-media-links a svg circle {
+          fill: #3D550C;
+          transition: .2s ease-in; }
+    footer div.social-media-links a:hover {
+      transform: translateY(-4px);
+      box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px fadeout(#3D550C, 75), 0 83px 4px 0px fadeout(#3D550C, 5); }
+      footer div.social-media-links a:hover svg.glow {
+        filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+        filter: blur(2px); }
+        footer div.social-media-links a:hover svg.glow path, footer div.social-media-links a:hover svg.glow circle {
+          fill: fadeout(#3D550C, 40); }
+      footer div.social-media-links a:hover svg path, footer div.social-media-links a:hover svg circle {
+        fill: #59981A; }

@@ -1,7 +1,10 @@
-$color-inst1: #59981a;
-$color-inst2: #ecf87f;
-$color-inst3: #5a9a2d;
-$color-inst4: white;
+$color-inst1: #81B622;
+$color-inst2: #59981A;
+$color-inst3: #3D550C;
+$color-inst4: #ECF87F;
+$color-inst5: white;
+
+
 @mixin sizes($width, $height) {  
   width: $width;
   height: $height;
@@ -14,7 +17,7 @@ $color-inst4: white;
     text-decoration: none;
 } 
 .pseudoBody{
-  background-image: url('../multimedia/backbody1.jpg');        
+  background-image: url('../multimedia/venus-legacy-3.jpg');        
   background-repeat: no-repeat;
   background-position: cover;
   background-size: 100vw 100vh;
@@ -32,20 +35,27 @@ $color-inst4: white;
   }    
 }
 header {
-  width: 100vw;
-  height: 20vh;    
+  @include sizes(100vw, 30vh);   
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  margin: 2vh 0 5vh 0;  
-  display: flex;  
+  margin: 0 0 5vh 0;  
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 100% 0 / 30%; 
+  background-image: linear-gradient( 135deg,  #81B622 10%, $color-inst3 100%);
+  box-shadow:
+       inset 0 -0.5em 1em rgba(0,0,0,0.4),
+             0 0  0 2px $color-inst4,
+             0.5em 0.5em 2.5em rgba(0,0,0,1);
       .header__titulo {
       font-family: "Cormorant Upright", serif;
       font-weight: bold;
-      font-size: 3vw;
+      font-size: 4vw;
+      word-spacing: 0.1vw;
       color: $color-inst3;
       text-transform: capitalize;
-      padding: 1vw;
+      padding: 1vw;          
       text-align:center;
       text-shadow: $color-inst2;      
       animation: aparecer 5s ease-in-out infinite;      
@@ -77,22 +87,29 @@ nav {
     a {  
         font-family: "Cormorant Upright", serif;
         font-weight: bold;           
-        color: $color-inst3;  
+        color: $color-inst4;  
         font-size: 1.8vw; 
         text-transform: capitalize;          
         text-align: center; 
         margin-left: 0.5vw; 
         transition: transform 1s;
+        border-bottom: 4px solid $color-inst5; 
+        text-decoration: none;
         }
         a:hover{
-          border-bottom: 4px solid $color-inst2;  
+          border-bottom: 4px solid $color-inst4;  
           text-decoration: none;
-          color:$color-inst1;   
+          color:$color-inst5;   
           transform: translateY(-1.2vh);                  
       }
 }   
+#carouselExampleCaptions{
+  position: relative;
+  overflow: hidden;
+  border-radius: 30% 30% 30% 30% / 20%; 
+}
 .imagenBack{
-  background-image: url('../multimedia/background.jpg');        
+  background-image: url('../multimedia/venus-legacy-3.jpg');        
     background-size: cover;
     background-position: top;
     @include sizes(100vw, 90vh);    
@@ -110,6 +127,18 @@ nav {
       text-align: center;
     }    
 }
+
+.backgroundColor{
+  background-color: $color-inst2;
+  @include sizes(40vw, 45vh);  
+  border: none;    
+  margin: 3vh 2vw 5vh 2vw;      
+}
+.imgUp{
+  @include sizes(30vw, 50vh);  
+  
+ 
+}
     .sectionP{
       padding: 7vh 2vw;
     .sectionP__texto {
@@ -117,22 +146,13 @@ nav {
       }
   }  
   p {
-    font-family: "Cormorant Upright", serif;
-    color: $color-inst3;
+    font-family: "Cormorant Upright", serif;    
     font-size: 1.5vw;
     word-spacing: 0.1vw;
     line-height: 2vw;
     text-align: center;
   }
   
-  ul li {
-    color: $color-inst3;
-  }
-  
-  ol li {
-    color: $color-inst3;
-  }
-
   .imagenTabla{
 
     display: flex;
@@ -157,21 +177,6 @@ nav {
     }
     }
   } 
-  .tituloTabla {
-    font-family: "Cormorant Upright", serif;
-    font-size: 1.5vw;
-    color: $color-inst3;
-  }
-  
-  .cuerpoTabla {
-    font-family: "Cormorant Upright", serif;
-    font-size: 1.5vw;
-    color: $color-inst3;
-    border-top: solid 5px $color-inst3;
-    border-right: solid 10px $color-inst3;
-    border-bottom: solid 7px $color-inst3;
-    border-left: solid 12px $color-inst3;
-  }
     
 $estetica: estetica1, estetica2, estetica3, estetica4, estetica5;
 
@@ -183,29 +188,10 @@ $estetica: estetica1, estetica2, estetica3, estetica4, estetica5;
 form {
   font-family: "Cormorant Upright", serif;
   font-size: 5vh;
-  margin: 10vh 20vw 10vh;
-  
+  margin: 10vh 20vw 10vh;  
   color: $color-inst1;
 }      
 
-footer {
-    background: $color-inst1;
-    @include sizes(100vw, 30vh); 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;   
-      p, .listaFooter {                   
-        font-family: "Cormorant Upright", serif;
-        font-size: 1.2vw;
-        color: white;
-        list-style: none;
-          }                    
-  }    
-  .divBody {
-    background-color: #81b622;
-    border-radius: 8px;    
-    height: 62vh;    
-  } 
   .infoImportant {   
     padding: 2vw;
   }
@@ -214,77 +200,86 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .estetica1 { 
-    @include sizes(20vw, 50vh); 
-    opacity: 0;
-    animation: aparecer2 6s ease-in infinite;
-  }
   
-  .estetica2 {
-    @include sizes(20vw, 50vh); 
-    opacity: 0;
-    animation: aparecer3 6s ease-in infinite;
-  }
-  .estetica3 { 
-    @include sizes(20vw, 50vh); 
-    opacity: 0;
-    animation: aparecer2 6s ease-in infinite;
-  }
-  @keyframes aparecer2 {
-    0% {
-      /* 0s */
-      opacity: 0;
-    }
-    18% {
-      /* 1s */
-      opacity: 1;
-    }
-    33% {
-      /* 2s */
-      opacity: 1;
-    }
-    66% {
-  
-      /* 4s */
-      opacity: 0;
-    }
-    100% {
-  
-      /* 6s */
-      opacity: 0;
-    }
-  
-  }
-  
-  @keyframes aparecer3 {
-    0% {
-      /* 0s */
-      opacity: 0;
-    }
-    33% {
-      /* 2s */
-      opacity: 0;
-    }
-    48%{
-      /* 3s */
-      opacity: 1;
-    }
-    66% {
-      /* 4s */
-      opacity: 1;
-    }
-    84%{
-      /* 5s */
-      opacity: 0;
-    }
-    100% {
-      /* 6s */
-      opacity: 0;
-    }  
-  }
   .seccionCentro{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+footer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 85% 85% 0 0 / 30%;
+  background: $color-inst4;
+  @include sizes(100vw, 40vh); 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow:
+  inset 0 -0.5em 1em rgba(0,0,0,0.4),0 0  0 2px $color-inst2, 0.5em 0.5em 2.5em rgba(0,0,0,1);
+
+  .logoTiny{
+    @include sizes(15vw, 30vh); 
+  }
+  div.social-media-links {
+		/* background: $color-inst7; */
+		overflow: hidden;
+		padding-bottom: 4px;
+		text-align: center;
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: inline;
+			margin: 0;
+			padding: 0;
+		}
+		a {
+			border-bottom: 0px solid rgba(0,0,0,0.95);
+			border-radius: 4px;
+			box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0), 0 6px 8px rgba(0,0,0,0), 0 24px 24px rgba(0,0,0,0), 0 36px 36px rgba(0,0,0,0), 0 64px 64px rgba(0,0,0,0), 0 64px 128px rgba(0,0,0,0), 0 120px 0 rgba(0,0,0,0), 0 86px 8px 6px rgba(0,0,0,0),;
+			display: inline-block;
+      height: 10vh;
+			padding: 20px;
+			position: relative;
+			transition: .2s ease-in;
+      width: 10vw;
+			svg {
+        left: 20px;
+        position: absolute;
+        top: 20px;
+				height: 50px;
+				width: 50px;
+        &.glow {
+          path, circle {
+            fill: rgba(0,0,0,0);
+          }
+        }
+				path, circle {
+					fill: $color-inst3;
+					transition: .2s ease-in;
+				}
+			}
+		}
+		a:hover {
+			transform: translateY(-4px);
+			box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0.1), 0 6px 8px rgba(0,0,0,0.05), 0 24px 24px rgba(0,0,0,0.05), 0 36px 36px rgba(0,0,0,0.05), 0 64px 64px rgba(0,0,0,0.15), 0 64px 128px rgba(0,0,0,0.15), 0 86px 8px 6px fadeout($color-inst3, 75), 0 83px 4px 0px fadeout($color-inst3, 5);
+			svg {
+        &.glow {
+          filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+          filter: blur(2px);
+          path, circle {
+            fill: fadeout($color-inst3, 40);
+          }
+        }
+				path, circle {
+					fill: $color-inst2;
+				}
+			}
+		}
+	}
+}
+
