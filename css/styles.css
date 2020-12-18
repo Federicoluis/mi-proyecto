@@ -85,7 +85,7 @@ nav {
 #carouselExampleCaptions {
   position: relative;
   overflow: hidden;
-  border-radius: 30% 30% 30% 30% / 20%; }
+  border-radius: 100% 0 0 0 / 30%; }
 
 .imagenBack {
   background-image: url("../multimedia/venus-legacy-3.jpg");
@@ -111,11 +111,14 @@ nav {
   width: 40vw;
   height: 45vh;
   border: none;
-  margin: 3vh 2vw 5vh 2vw; }
+  margin: 3vh 2vw 5vh 2vw;
+  background-color: #81B622;
+  border-radius: 0 0 100% 0 / 30%; }
 
 .imgUp {
   width: 30vw;
-  height: 50vh; }
+  height: 50vh;
+  border-radius: 100% 0 0 0 / 30%; }
 
 .sectionP {
   padding: 7vh 2vw; }
@@ -160,9 +163,34 @@ p {
 
 form {
   font-family: "Cormorant Upright", serif;
-  font-size: 5vh;
+  font-size: 4vh;
   margin: 10vh 20vw 10vh;
   color: #81B622; }
+
+.location, .signDate, .nameDatePhon {
+  display: flex;
+  flex-direction: row; }
+
+input {
+  padding: 1vh 2vw 0 2vw;
+  margin: 0 1vw 0 0.5vw;
+  border: none;
+  border-bottom: 1px solid black; }
+
+.closestSchool, .positionPlay, .size, .signDate {
+  display: flex; }
+
+.wholeLine input {
+  width: 42.5vw; }
+
+.location input {
+  width: 20.5vw; }
+
+div {
+  margin-bottom: 1vh; }
+
+div p {
+  margin-bottom: 2vh; }
 
 .infoImportant {
   padding: 2vw; }
@@ -181,10 +209,10 @@ form {
 footer {
   position: relative;
   overflow: hidden;
-  border-radius: 85% 85% 0 0 / 30%;
+  border-radius: 100% 0 0 0 / 30%;
   background: #ECF87F;
   width: 100vw;
-  height: 40vh;
+  height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;

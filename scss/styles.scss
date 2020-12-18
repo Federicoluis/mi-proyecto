@@ -44,10 +44,7 @@ header {
   overflow: hidden;
   border-radius: 0 0 100% 0 / 30%; 
   background-image: linear-gradient( 135deg,  #81B622 10%, $color-inst3 100%);
-  box-shadow:
-       inset 0 -0.5em 1em rgba(0,0,0,0.4),
-             0 0  0 2px $color-inst4,
-             0.5em 0.5em 2.5em rgba(0,0,0,1);
+  box-shadow: inset 0 -0.5em 1em rgba(0,0,0,0.4), 0 0 0 2px $color-inst4, 0.5em 0.5em 2.5em rgba(0,0,0,1);
       .header__titulo {
       font-family: "Cormorant Upright", serif;
       font-weight: bold;
@@ -106,7 +103,7 @@ nav {
 #carouselExampleCaptions{
   position: relative;
   overflow: hidden;
-  border-radius: 30% 30% 30% 30% / 20%; 
+  border-radius: 100% 0 0 0 / 30%; 
 }
 .imagenBack{
   background-image: url('../multimedia/venus-legacy-3.jpg');        
@@ -132,13 +129,16 @@ nav {
   background-color: $color-inst2;
   @include sizes(40vw, 45vh);  
   border: none;    
-  margin: 3vh 2vw 5vh 2vw;      
+  margin: 3vh 2vw 5vh 2vw; 
+  background-color: $color-inst1;
+  border-radius: 0 0 100% 0 / 30%; 
+
 }
 .imgUp{
-  @include sizes(30vw, 50vh);  
-  
- 
-}
+  @include sizes(30vw, 50vh);   
+  border-radius: 100% 0 0 0 / 30%; 
+  }
+
     .sectionP{
       padding: 7vh 2vw;
     .sectionP__texto {
@@ -187,10 +187,36 @@ $estetica: estetica1, estetica2, estetica3, estetica4, estetica5;
 }
 form {
   font-family: "Cormorant Upright", serif;
-  font-size: 5vh;
+  font-size: 4vh;
   margin: 10vh 20vw 10vh;  
   color: $color-inst1;
 }      
+.location,.signDate,.nameDatePhon { 
+  display: flex;
+  flex-direction: row;           
+}
+input {
+  padding: 1vh 2vw 0 2vw;
+  margin:0 1vw 0 0.5vw;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.closestSchool, .positionPlay,.size, .signDate{
+  display: flex;
+
+}
+.wholeLine input {
+  width: 42.5vw;
+}
+.location input{
+  width: 20.5vw;
+}
+div{
+  margin-bottom: 1vh;
+}
+div p {
+margin-bottom: 2vh;
+}
 
   .infoImportant {   
     padding: 2vw;
@@ -211,9 +237,9 @@ form {
 footer {
   position: relative;
   overflow: hidden;
-  border-radius: 85% 85% 0 0 / 30%;
+  border-radius: 100% 0 0 0 / 30%;
   background: $color-inst4;
-  @include sizes(100vw, 40vh); 
+  @include sizes(100vw, 100vh); 
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -282,4 +308,3 @@ footer {
 		}
 	}
 }
-
