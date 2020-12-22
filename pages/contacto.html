@@ -14,7 +14,7 @@
 
 <body>    
   <header>
-    <h1 class= "header__titulo">Sthetic Care Spa Urbano</h1>
+    <h2 class= "header__titulo">Sthetic Care Spa Urbano</h2>
     <!-- <img src="../multimedia/logo_redondo.jpg" alt="logo"> -->
         <!-- Menú -->   
     <nav>
@@ -28,92 +28,103 @@
 </header> 
 <h1>Solicitud de Turnos</h1>
     <section> 
-      <div>
+      
       
   <form class="form">
       <div class="nameDatePhon">
           <div>
-              <label for="name">Player's First Name:</label>	
+              <label for="name">Nombre:</label>	
               <input type="text" name="name" id="name"/>
           </div>        
           <div>
-              <label for="lastName">Last Name:</label>	
+              <label for="lastName">Apellido:</label>	
               <input type="text" name="lastName" id="lastName"/>
           </div>
       </div>
       <div class="wholeLine">
-          <label for="address">Street Address:</label>	
-          <input type="text" name="address" id="address" />
-      </div>            
-      <div class="location">
+          <label for="celular">N° Celular:</label>	
+          <input type="phone" name="celular" id="celular" />
+      </div> 
+      <div>
+        <label for="wzp">Whatsapp:</label>	
+        <input type="radio" value="si" name="wzp" id="wzp"/>Si
+        <input type="radio" value="no" name="wzp" id="wzp"/>No                
+    </div>    
+      <div class="email">
+        <label for="celular">Correo electronico:</label>	
+          <input type="email" name="email" id="email"/> 
+        </div>
+    </div> 
+      
+      <div class="location">                               
           <div>
-              <label for="city">City:</label>	
-              <input type="text" name="city" id="city"/>
-          </div>        
-          <div>
-              <label for="zip">Zip Code:</label>	
-              <input type="text" name="zip" id="zip"/>
+              <label for="dni">DNI:</label>	
+              <input type="number" name="dni" id="dni"/>
           </div>
       </div>
       <div class="nameDatePhon">
           <div>
-              <label for="birthDate">Birth Date(mm/dd/yyyy):</label>	
-              <input type="date" name="birthDate" id="birthDate" />
+              <label for="cumpleaños">Fecha de cumpleaños:</label>	
+              <input type="date" name="cumpleaños" id="cumpleaños"/>
           </div>
-          <div>
-              <label for="gender">Gender:</label>	
-              <input type="radio" value="f" name="gender" id="gender" />Female
-              <input type="radio" value="m" name="gender" id="gender" />Male                
           </div>
-      </div>
-      <div>
-          <label for="grade">Grade:</label>	
-          <input type="radio" value="ps" name="grade" id="grade" />Pre-School
-          <input type="radio" value="1" name="grade" id="grade" />1st
-          <input type="radio" value="2" name="grade" id="grade" />2st
-          <input type="radio" value="3" name="grade" id="grade" />3st
-          <input type="radio" value="4" name="grade" id="grade" />4st
-          <input type="radio" value="5" name="grade" id="grade" />5st            
-      </div>                
-          <h4>Which elementary school do you live near?</h4>    
-          <h5>Closest School:</h5>
+            <h4>Seleccione si:</h4>
+          <div class="size">                    
+            <div>
+                <div>
+                    <input type="radio" value="pVez" name="condicion" id="condicion" />Es su primera vez
+                </div>
+                <div>
+                    <input type="radio" value="paciente" name="condicion" id="condicion" />Ya es paciente
+                </div> 
+                <div>
+                  <input type="radio" value="paciente" name="condicion" id="condicion" />Si es referido,
+                  
+                    <label for="nombreReferido">por:</label>	
+                    <input type="text" name="nombreReferido" id="nombreReferido"/>
+                
+              </div>                 
+            </div>                                           
+        </div>
+        
+          
+          <h3>¿Que tratamientos quieres hacerte?</h3>    
+          <p>Seleccionalos:</p>
           <div class="closestSchool">  
               <div>
                   <div>
-                      <input type="checkbox" value="aj" name="closest" id="closest" />AJ Katzenmaier
+                      <input type="checkbox" value="facial" name="tratam" id="tratam" />Facial
                   </div>             	
                   <div>
-                      <input type="checkbox" value="gr" name="closest" id="closest" />Greenbay
+                      <input type="checkbox" value="corporal" name="tratam" id="tratam" />Corporal
                   </div>
                   <div>
-                      <input type="checkbox" value="how" name="closest" id="closest" />Howard A Yeager 
+                      <input type="checkbox" value="depi" name="tratam" id="tratam" />Depilacion Laser
                   </div>
               </div> 
               <div>
                   <div>
-                      <input type="checkbox" value="mar" name="closest" id="closest" />Marjorie P Hart
+                      <input type="checkbox" value="pilates" name="tratam" id="tratam" />Pilates
                   </div>
                   <div>
-                      <input type="checkbox" value="nor" name="closest" id="closest" />North Elementary
+                      <input type="checkbox" value="uñas" name="tratam" id="tratam" />Uñas
                   </div>                    
                   <div>
-                      <input type="checkbox" value="sou" name="closest" id="closest" />South Elementary
-                  </div>
+                      <input type="checkbox" value="pies" name="tratam" id="tratam" />Pies
               </div>                                
           </div>        
-      <div>
-          <h4>What position(s) do you normally play? (check all that apply)</h4>
-          <div class="positionPlay">
-            <div class="form-group"> <!-- State Button -->
-              <label for="state_id" class="control-label">State</label>
-              <select class="form-control" id="state_id">
-                  <option value="AL">Alabama</option>
-                  <option value="AK">Alaska</option>
-                  <option value="AZ">Arizona</option>
-                  <option value="AR">Arkansas</option>
-                  <option value="CA">California</option>
-                  <option value="CO">Colorado</option>
-                  <option value="CT">Connecticut</option>
+      <div class="wholeLine1">
+               
+            <label for="turnosTratamientos"></label>
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="turnosTratamientos">
+            <option selected>Seleccionar Tratamientos</option>
+            <option value="AL">Alabama</option>
+                  <option value="AK">######</option>
+                  <option value="AZ">######</option>
+                  <option value="AR">######</option>
+                  <option value="CA">######</option>
+                  <option value="CO">######</option>
+                  <option value="CT">######</option>
                   <option value="DE">Delaware</option>
                   <option value="DC">District Of Columbia</option>
                   <option value="FL">Florida</option>
@@ -158,41 +169,29 @@
                   <option value="WV">West Virginia</option>
                   <option value="WI">Wisconsin</option>
                   <option value="WY">Wyoming</option>
-              </select>                    
-          </div>
+              </select> 
+            </div>                                        
+        
+      
+      
+      
+    </section>
+
+    <section class="container">
+      <div class="row d-flex align-items-md-center ">
+        <article class="col-md-6 ">
+          <p>Horarios de atención</p> 
+          <p>Lunes a Sabados de 09:00hs a 22:00hs</p>           
+          <p>+54 379 465-5371</p>          
+          <p>O envíenos un e-mail y a la brevedad nos contactaremos.</p>           
+          <p>contacto@stethic-care.com</p>           
+          <p>También pueden encontrarnos en nuestras redes:</p> 
+        </article>
+      
+        <aside class="col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.950586491384!2d-58.823861185461965!3d-27.4707976828904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456b676aef9e9f%3A0x9bd8a4dae337a7c2!2sPer%C3%BA%201055%2C%20W3400%20CQF%2C%20Corrientes!5e0!3m2!1ses!2sar!4v1608602501361!5m2!1ses!2sar" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </aside>   
       </div>
-      <div>
-          <h4>Uniform Size:</h4>
-          <div class="size">                    
-              <div>
-                  <div>
-                      <input type="radio" value="ys" name="size" id="size" />Youth Small
-                  </div>
-                  <div>
-                      <input type="radio" value="ym" name="size" id="size" />Youth Medium
-                  </div>
-                  <div>
-                      <input type="radio" value="yl" name="size" id="size" />Youth Large
-                  </div>
-                  <div>
-                      <input type="radio" value="s" name="size" id="size" />Small
-                  </div>
-              </div>
-              <div>
-                  <div>
-                      <input type="radio" value="m" name="size" id="size" />Medium
-                  </div>
-                  <div>
-                      <input type="radio" value="l" name="size" id="size" />Large
-                  </div>
-                  <div>
-                      <input type="radio" value="xl" name="size" id="size" />Extra-Large
-                  </div>   
-              </div>                                      
-          </div>
-      </div>
-      <div>
-    </div>  
     </section>
     
         <!-- Formulario -->
@@ -220,22 +219,68 @@
     </section>
     </section> -->
         <!-- Final de pagina -->
-    <footer>                            
-        <article class="listaFooter">
-            <p>STETHIC CARE SPA URBANO</p>
-                <li>Tratamientos Corporales</li>
-                <li>Faciales</li>
-                <li>Capilares</li>
-                <li>Depilación Definitiva</li>
-                <li>Belleza de Manos y Pies</li>
-                <li>Pilates</li> 
-            </article>    
-                            
-            <article>
-                <p>CONTACTANOS</p>
-                <p> +54 379 465-5371</p>  
-            </article>                            
-    </footer>
+        <footer class="container-fluid">
+          <div class="column">
+          <div class="social-media-links row d-flex justify-content-around align-items-center">            
+            <ul>
+              <li>
+                <!-- twitter -->
+                <a href="#">
+                  <svg class="glow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path class="st0" d="M9.5 27.1c11.2 0 17.4-9.3 17.4-17.4 0-0.3 0-0.5 0-0.8 1.2-0.9 2.2-1.9 3-3.2 -1.1 0.5-2.3 0.8-3.5 1 1.3-0.8 2.2-2 2.7-3.4 -1.2 0.7-2.5 1.2-3.9 1.5 -1.1-1.2-2.7-1.9-4.5-1.9 -3.4 0-6.1 2.7-6.1 6.1 0 0.5 0.1 0.9 0.2 1.4C9.7 10.1 5.2 7.7 2.2 4 1.7 4.9 1.4 6 1.4 7.1c0 2.1 1.1 4 2.7 5.1 -1 0-1.9-0.3-2.8-0.8 0 0 0 0.1 0 0.1 0 3 2.1 5.4 4.9 6 -0.5 0.1-1.1 0.2-1.6 0.2 -0.4 0-0.8 0-1.1-0.1 0.8 2.4 3 4.2 5.7 4.2 -2.1 1.6-4.7 2.6-7.6 2.6 -0.5 0-1 0-1.5-0.1C2.8 26.1 6 27.1 9.5 27.1"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path class="st0" d="M9.5 27.1c11.2 0 17.4-9.3 17.4-17.4 0-0.3 0-0.5 0-0.8 1.2-0.9 2.2-1.9 3-3.2 -1.1 0.5-2.3 0.8-3.5 1 1.3-0.8 2.2-2 2.7-3.4 -1.2 0.7-2.5 1.2-3.9 1.5 -1.1-1.2-2.7-1.9-4.5-1.9 -3.4 0-6.1 2.7-6.1 6.1 0 0.5 0.1 0.9 0.2 1.4C9.7 10.1 5.2 7.7 2.2 4 1.7 4.9 1.4 6 1.4 7.1c0 2.1 1.1 4 2.7 5.1 -1 0-1.9-0.3-2.8-0.8 0 0 0 0.1 0 0.1 0 3 2.1 5.4 4.9 6 -0.5 0.1-1.1 0.2-1.6 0.2 -0.4 0-0.8 0-1.1-0.1 0.8 2.4 3 4.2 5.7 4.2 -2.1 1.6-4.7 2.6-7.6 2.6 -0.5 0-1 0-1.5-0.1C2.8 26.1 6 27.1 9.5 27.1"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <!-- facebook -->
+                <a href="#">
+                  <svg class="glow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path class="st0" d="M28.3 0.1H1.7c-0.9 0-1.6 0.7-1.6 1.6v26.5c0 0.9 0.7 1.6 1.6 1.6H16V18.4h-3.9v-4.5H16v-3.3c0-3.9 2.4-5.9 5.8-5.9 1.6 0 3.1 0.1 3.5 0.2v4l-2.4 0c-1.9 0-2.2 0.9-2.2 2.2v2.9h4.5l-0.6 4.5h-3.9v11.5h7.6c0.9 0 1.6-0.7 1.6-1.6V1.7C29.9 0.8 29.2 0.1 28.3 0.1z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path class="st0" d="M28.3 0.1H1.7c-0.9 0-1.6 0.7-1.6 1.6v26.5c0 0.9 0.7 1.6 1.6 1.6H16V18.4h-3.9v-4.5H16v-3.3c0-3.9 2.4-5.9 5.8-5.9 1.6 0 3.1 0.1 3.5 0.2v4l-2.4 0c-1.9 0-2.2 0.9-2.2 2.2v2.9h4.5l-0.6 4.5h-3.9v11.5h7.6c0.9 0 1.6-0.7 1.6-1.6V1.7C29.9 0.8 29.2 0.1 28.3 0.1z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>               
+                  <img class="logoTiny img-fluid" src="/multimedia/logo_redondo-removebg.png" alt="">                
+                <!-- youtube -->
+                <a href="#">
+                  <svg class="glow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path class="st0" d="M29.7 9c0 0-0.3-2.1-1.2-3 -1.1-1.2-2.4-1.2-3-1.3C21.3 4.5 15 4.5 15 4.5h0c0 0-6.3 0-10.5 0.3C3.9 4.8 2.6 4.8 1.5 6 0.6 6.9 0.3 9 0.3 9S0 11.4 0 13.9v2.3C0 18.6 0.3 21 0.3 21s0.3 2.1 1.2 3c1.1 1.2 2.6 1.2 3.3 1.3C7.2 25.5 15 25.6 15 25.6s6.3 0 10.5-0.3c0.6-0.1 1.9-0.1 3-1.3 0.9-0.9 1.2-3 1.2-3s0.3-2.4 0.3-4.9v-2.3C30 11.4 29.7 9 29.7 9zM11.9 18.9l0-8.4 8.1 4.2L11.9 18.9z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path class="st0" d="M29.7 9c0 0-0.3-2.1-1.2-3 -1.1-1.2-2.4-1.2-3-1.3C21.3 4.5 15 4.5 15 4.5h0c0 0-6.3 0-10.5 0.3C3.9 4.8 2.6 4.8 1.5 6 0.6 6.9 0.3 9 0.3 9S0 11.4 0 13.9v2.3C0 18.6 0.3 21 0.3 21s0.3 2.1 1.2 3c1.1 1.2 2.6 1.2 3.3 1.3C7.2 25.5 15 25.6 15 25.6s6.3 0 10.5-0.3c0.6-0.1 1.9-0.1 3-1.3 0.9-0.9 1.2-3 1.2-3s0.3-2.4 0.3-4.9v-2.3C30 11.4 29.7 9 29.7 9zM11.9 18.9l0-8.4 8.1 4.2L11.9 18.9z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <!-- instagram -->
+                <a href="#">
+                  <svg class="glow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path class="st0" d="M15 2.8c4 0 4.4 0 6 0.1 1.4 0.1 2.2 0.3 2.8 0.5 0.7 0.3 1.2 0.6 1.7 1.1 0.5 0.5 0.8 1 1.1 1.7C26.8 6.8 27 7.6 27.1 9c0.1 1.6 0.1 2 0.1 6s0 4.4-0.1 6c-0.1 1.4-0.3 2.2-0.5 2.8 -0.3 0.7-0.6 1.2-1.1 1.7 -0.5 0.5-1 0.8-1.7 1.1 -0.5 0.2-1.3 0.4-2.8 0.5 -1.6 0.1-2 0.1-6 0.1s-4.4 0-6-0.1c-1.4-0.1-2.2-0.3-2.8-0.5 -0.7-0.3-1.2-0.6-1.7-1.1 -0.5-0.5-0.8-1-1.1-1.7C3.2 23.2 3 22.4 2.9 21c-0.1-1.6-0.1-2-0.1-6s0-4.4 0.1-6C3 7.6 3.2 6.8 3.4 6.2 3.7 5.5 4 5.1 4.5 4.5c0.5-0.5 1-0.8 1.7-1.1C6.8 3.2 7.6 3 9 2.9 10.6 2.8 11 2.8 15 2.8M15 0.2c-4 0-4.5 0-6.1 0.1C7.3 0.3 6.2 0.6 5.3 0.9c-1 0.4-1.8 0.9-2.6 1.7C1.8 3.5 1.3 4.3 0.9 5.3c-0.4 0.9-0.6 2-0.7 3.6C0.2 10.5 0.1 11 0.1 15c0 4 0 4.5 0.1 6.1 0.1 1.6 0.3 2.7 0.7 3.6 0.4 1 0.9 1.8 1.7 2.6 0.8 0.8 1.7 1.3 2.6 1.7 0.9 0.4 2 0.6 3.6 0.7 1.6 0.1 2.1 0.1 6.1 0.1s4.5 0 6.1-0.1c1.6-0.1 2.7-0.3 3.6-0.7 1-0.4 1.8-0.9 2.6-1.7 0.8-0.8 1.3-1.7 1.7-2.6 0.4-0.9 0.6-2 0.7-3.6 0.1-1.6 0.1-2.1 0.1-6.1s0-4.5-0.1-6.1c-0.1-1.6-0.3-2.7-0.7-3.6 -0.4-1-0.9-1.8-1.7-2.6 -0.8-0.8-1.7-1.3-2.6-1.7 -0.9-0.4-2-0.6-3.6-0.7C19.5 0.2 19 0.2 15 0.2L15 0.2z"/>
+                    <path class="st0" d="M15 7.4c-4.2 0-7.6 3.4-7.6 7.6s3.4 7.6 7.6 7.6 7.6-3.4 7.6-7.6S19.2 7.4 15 7.4zM15 20c-2.7 0-5-2.2-5-5s2.2-5 5-5c2.7 0 5 2.2 5 5S17.7 20 15 20z"/>
+                    <circle class="st0" cx="22.9" cy="7.1" r="1.8"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+                    <path class="st0" d="M15 2.8c4 0 4.4 0 6 0.1 1.4 0.1 2.2 0.3 2.8 0.5 0.7 0.3 1.2 0.6 1.7 1.1 0.5 0.5 0.8 1 1.1 1.7C26.8 6.8 27 7.6 27.1 9c0.1 1.6 0.1 2 0.1 6s0 4.4-0.1 6c-0.1 1.4-0.3 2.2-0.5 2.8 -0.3 0.7-0.6 1.2-1.1 1.7 -0.5 0.5-1 0.8-1.7 1.1 -0.5 0.2-1.3 0.4-2.8 0.5 -1.6 0.1-2 0.1-6 0.1s-4.4 0-6-0.1c-1.4-0.1-2.2-0.3-2.8-0.5 -0.7-0.3-1.2-0.6-1.7-1.1 -0.5-0.5-0.8-1-1.1-1.7C3.2 23.2 3 22.4 2.9 21c-0.1-1.6-0.1-2-0.1-6s0-4.4 0.1-6C3 7.6 3.2 6.8 3.4 6.2 3.7 5.5 4 5.1 4.5 4.5c0.5-0.5 1-0.8 1.7-1.1C6.8 3.2 7.6 3 9 2.9 10.6 2.8 11 2.8 15 2.8M15 0.2c-4 0-4.5 0-6.1 0.1C7.3 0.3 6.2 0.6 5.3 0.9c-1 0.4-1.8 0.9-2.6 1.7C1.8 3.5 1.3 4.3 0.9 5.3c-0.4 0.9-0.6 2-0.7 3.6C0.2 10.5 0.1 11 0.1 15c0 4 0 4.5 0.1 6.1 0.1 1.6 0.3 2.7 0.7 3.6 0.4 1 0.9 1.8 1.7 2.6 0.8 0.8 1.7 1.3 2.6 1.7 0.9 0.4 2 0.6 3.6 0.7 1.6 0.1 2.1 0.1 6.1 0.1s4.5 0 6.1-0.1c1.6-0.1 2.7-0.3 3.6-0.7 1-0.4 1.8-0.9 2.6-1.7 0.8-0.8 1.3-1.7 1.7-2.6 0.4-0.9 0.6-2 0.7-3.6 0.1-1.6 0.1-2.1 0.1-6.1s0-4.5-0.1-6.1c-0.1-1.6-0.3-2.7-0.7-3.6 -0.4-1-0.9-1.8-1.7-2.6 -0.8-0.8-1.7-1.3-2.6-1.7 -0.9-0.4-2-0.6-3.6-0.7C19.5 0.2 19 0.2 15 0.2L15 0.2z"/>
+                    <path class="st0" d="M15 7.4c-4.2 0-7.6 3.4-7.6 7.6s3.4 7.6 7.6 7.6 7.6-3.4 7.6-7.6S19.2 7.4 15 7.4zM15 20c-2.7 0-5-2.2-5-5s2.2-5 5-5c2.7 0 5 2.2 5 5S17.7 20 15 20z"/>
+                    <circle class="st0" cx="22.9" cy="7.1" r="1.8"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>            
+            <div class="text-center">  
+              <p>               
+                Copyright &copy; Todos los derechos reservados | Este diseño esta creado por:<a id="as" href="#" target="_blank">Federico Perez</a>
+                              </p>
+             </div>          
+        </div>
+          </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 </body>

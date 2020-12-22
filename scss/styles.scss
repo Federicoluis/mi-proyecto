@@ -9,21 +9,61 @@ $color-inst5: white;
   width: $width;
   height: $height;
 }
-* {
+  * {
     margin: 0;
-    padding: 0;      
-    box-sizing: border-box;
+    padding: 0;
     list-style: none;
     text-decoration: none;
 } 
-.pseudoBody{
-  background-image: url('../multimedia/venus-legacy-3.jpg');        
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  background-color: $color-inst4; }
+
+article,footer, header, main, nav, section {
+  display: block; }
+
+.imgCorporal, .imgFacial{          
   background-repeat: no-repeat;
-  background-position: cover;
-  background-size: 100vw 100vh;
-  background-attachment: fixed;
-  opacity: 0.5;
-  @include sizes(100vw, 90vh);
+  background-position: center;  
+  background-size: 70vw 90vh;   
+  @include sizes(60vw, 90vh);  
+}
+.imgCorporal{
+  background-image: url('../multimedia/cooltech-1080x812.png');
+  border-radius: 0 100% 0 0 / 30%; 
+}
+
+.imgFacial{
+  background-image: url('/multimedia/facial-black-1200x902-a-1080x812.png');
+  border-radius: 100% 0 0 0 / 30%; 
+}
+.palabraMargen{
+  font-family: "Cormorant Upright", serif;
+    color: $color-inst1;   
+    font-size: 7vw; 
+    font-weight: bold;     
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 10vh 0;
+}
+.palabraMargen1{
+  font-family: "Cormorant Upright", serif;
+    color: $color-inst3;   
+    font-size: 7vw; 
+    font-weight: bold;     
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 10vh 0;
+}
+
   h1 {
     font-family: "Cormorant Upright", serif;
     color: $color-inst1;
@@ -33,7 +73,7 @@ $color-inst5: white;
     word-spacing: 0.1vw;
     text-align: center;
   }    
-}
+
 header {
   @include sizes(100vw, 30vh);   
   display: flex;
@@ -97,13 +137,15 @@ nav {
           border-bottom: 4px solid $color-inst4;  
           text-decoration: none;
           color:$color-inst5;   
-          transform: translateY(-1.2vh);                  
+          transform: translateY(-1.2vh);
+          transform: translateY(-4px);
+			box-shadow: inset 0 -3px 0 0 rgba(0,0,0,0.1), 0 6px 8px rgba(0,0,0,0.05), 0 24px 24px rgba(0,0,0,0.05), 0 36px 36px rgba(0,0,0,0.05), 0 64px 64px rgba(0,0,0,0.15), 0 64px 128px rgba(0,0,0,0.15), 0 86px 8px 6px fadeout($color-inst3, 75), 0 83px 4px 0px fadeout($color-inst3, 5);                  
       }
 }   
 #carouselExampleCaptions{
   position: relative;
   overflow: hidden;
-  border-radius: 100% 0 0 0 / 30%; 
+  border-radius: 60% 0 60% 0/ 30%; 
 }
 .imagenBack{
   background-image: url('../multimedia/venus-legacy-3.jpg');        
@@ -114,15 +156,33 @@ nav {
     justify-content: center;    
     align-items: center;
     border: 1px solid $color-inst3;  
+  }
     h1 {
       font-family: "Cormorant Upright", serif;
       color: $color-inst1;
       text-shadow:  0.2vw 0.2vh $color-inst2;
-      font-size: 7vw; 
+      font-size: 5vw; 
       font-weight: bold;     
       word-spacing: 0.1vw;
       text-align: center;
+      margin-bottom: 10vh;
     }    
+h2, h3{
+  font-family: "Cormorant Upright", serif;
+  color: $color-inst3;   
+  font-weight: bold;     
+  word-spacing: 0.1vw;
+  text-align: center;
+}
+h4{
+  font-family: "Cormorant Upright", serif;
+  color: $color-inst4;      
+  text-align: center;
+}
+h5{
+  font-family: "Cormorant Upright", serif;
+  color: $color-inst4;      
+  text-align: center;
 }
 
 .backgroundColor{
@@ -131,14 +191,16 @@ nav {
   border: none;    
   margin: 3vh 2vw 5vh 2vw; 
   background-color: $color-inst1;
-  border-radius: 0 0 100% 0 / 30%; 
+  border-radius: 0 100% 0 100% / 30%; 
 
 }
 .imgUp{
   @include sizes(30vw, 50vh);   
-  border-radius: 100% 0 0 0 / 30%; 
+  border-radius: 100% 0 100% 0 / 30%; 
   }
-
+  .card, .btn{
+    border-radius: 100% 0 100% 0 / 30%; 
+  }
     .sectionP{
       padding: 7vh 2vw;
     .sectionP__texto {
@@ -152,7 +214,52 @@ nav {
     line-height: 2vw;
     text-align: center;
   }
-  
+  /* NOSOTROS */
+  .cinco{
+    display: flex;
+    justify-content: space-evenly;
+    }
+    
+    .cincoSeis{
+        display: flex;
+        flex-direction: column;    
+        align-items: center;
+        padding: 1vh 4vw 1vh 4vw;
+    }
+    .quien{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 30vh;
+        padding: 5vw;
+    }
+    .quien p{            
+            font-weight: 700;
+            color: $color-inst2;
+            font-size: 4vw;        
+            padding: 0.25em; 
+    }
+    .cincoSeis img{
+        border-radius: 100%;
+    }
+    .cincoSeis .nombre {
+        
+        font-weight: 500;
+        color: $color-inst3;
+        font-size: 2vw;
+        text-transform: capitalize; 
+        margin:5vh 0;
+    }
+    .cincoSeis .matricula {        
+        font-weight: 400;
+        color:$color-inst2;
+        font-size: 1.5vw;
+        text-transform: uppercase; 
+        
+    }
+    img{
+      border-radius: 100% 0 0 0 / 30%; 
+    }
   .imagenTabla{
 
     display: flex;
@@ -185,10 +292,12 @@ $estetica: estetica1, estetica2, estetica3, estetica4, estetica5;
     background-image: url('images/#{$estetica}.jpg')
   }
 }
+
+          
 form {
   font-family: "Cormorant Upright", serif;
-  font-size: 4vh;
-  margin: 10vh 20vw 10vh;  
+  font-size: 3vh;
+  margin: 10vh 18vw 10vh;  
   color: $color-inst1;
 }      
 .location,.signDate,.nameDatePhon { 
@@ -199,14 +308,21 @@ input {
   padding: 1vh 2vw 0 2vw;
   margin:0 1vw 0 0.5vw;
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $color-inst3;
+  background-color: $color-inst4;
+  color: $color-inst3;
+  
 }
 .closestSchool, .positionPlay,.size, .signDate{
   display: flex;
 
 }
+.wholeLine1{
+  margin-left: 5vw; 
+}
 .wholeLine input {
-  width: 42.5vw;
+  width: 76%;
+   
 }
 .location input{
   width: 20.5vw;
@@ -216,6 +332,10 @@ div{
 }
 div p {
 margin-bottom: 2vh;
+}
+
+.horarioAtencion{
+  text-align: center;
 }
 
   .infoImportant {   
@@ -233,13 +353,31 @@ margin-bottom: 2vh;
     justify-content: center;
     align-items: center;
 }
+#as{
+  font-family: "Cormorant Upright", serif;
+  font-weight: bold;           
+  color: $color-inst3;  
+  font-size: 1.5vw; 
+  text-transform: capitalize;          
+  text-align: center; 
+  margin-left: 0.5vw; 
+  transition: transform 1s;
+  border-bottom: 4px solid $color-inst1; 
+  text-decoration: none;
+}
+#as:hover{
+  border-bottom: 4px solid $color-inst5;  
+  text-decoration: none;
+  color:$color-inst2;   
+  transform: translateY(-1.2vh);                  
+}
 
 footer {
   position: relative;
   overflow: hidden;
   border-radius: 100% 0 0 0 / 30%;
   background: $color-inst4;
-  @include sizes(100vw, 100vh); 
+  @include sizes(100vw, 45vh); 
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -247,12 +385,13 @@ footer {
   inset 0 -0.5em 1em rgba(0,0,0,0.4),0 0  0 2px $color-inst2, 0.5em 0.5em 2.5em rgba(0,0,0,1);
 
   .logoTiny{
-    @include sizes(15vw, 30vh); 
+    @include sizes(15vw, 33vh); 
+    padding: 2vh 2vh 2vw;
+    border-radius: 0;
   }
-  div.social-media-links {
-		/* background: $color-inst7; */
+  div.social-media-links  {		
 		overflow: hidden;
-		padding-bottom: 4px;
+		padding-top: 2vh;
 		text-align: center;
 		ul {
 			margin: 0;
@@ -274,17 +413,16 @@ footer {
 			transition: .2s ease-in;
       width: 10vw;
 			svg {
-        left: 20px;
+        left: -0.5vw;
         position: absolute;
-        top: 20px;
-				height: 50px;
-				width: 50px;
+        top: 6vh;
+				@include sizes(10vw, 10vh); 
         &.glow {
           path, circle {
             fill: rgba(0,0,0,0);
           }
         }
-				path, circle {
+				path, circle, .logoTiny {
 					fill: $color-inst3;
 					transition: .2s ease-in;
 				}
@@ -301,7 +439,7 @@ footer {
             fill: fadeout($color-inst3, 40);
           }
         }
-				path, circle {
+        path, circle {
 					fill: $color-inst2;
 				}
 			}

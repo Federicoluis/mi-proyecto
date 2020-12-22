@@ -2,27 +2,64 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   list-style: none;
   text-decoration: none; }
 
-.pseudoBody {
-  background-image: url("../multimedia/venus-legacy-3.jpg");
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  background-color: #ECF87F; }
+
+article, footer, header, main, nav, section {
+  display: block; }
+
+.imgCorporal, .imgFacial {
   background-repeat: no-repeat;
-  background-position: cover;
-  background-size: 100vw 100vh;
-  background-attachment: fixed;
-  opacity: 0.5;
-  width: 100vw;
+  background-position: center;
+  background-size: 70vw 90vh;
+  width: 60vw;
   height: 90vh; }
-  .pseudoBody h1 {
-    font-family: "Cormorant Upright", serif;
-    color: #81B622;
-    text-shadow: 0.2vw 0.2vh #59981A;
-    font-size: 7vw;
-    font-weight: bold;
-    word-spacing: 0.1vw;
-    text-align: center; }
+
+.imgCorporal {
+  background-image: url("../multimedia/cooltech-1080x812.png");
+  border-radius: 0 100% 0 0 / 30%; }
+
+.imgFacial {
+  background-image: url("/multimedia/facial-black-1200x902-a-1080x812.png");
+  border-radius: 100% 0 0 0 / 30%; }
+
+.palabraMargen {
+  font-family: "Cormorant Upright", serif;
+  color: #81B622;
+  font-size: 7vw;
+  font-weight: bold;
+  word-spacing: 0.1vw;
+  text-align: center;
+  margin: 10vh 0; }
+
+.palabraMargen1 {
+  font-family: "Cormorant Upright", serif;
+  color: #3D550C;
+  font-size: 7vw;
+  font-weight: bold;
+  word-spacing: 0.1vw;
+  text-align: center;
+  margin: 10vh 0; }
+
+h1 {
+  font-family: "Cormorant Upright", serif;
+  color: #81B622;
+  text-shadow: 0.2vw 0.2vh #59981A;
+  font-size: 7vw;
+  font-weight: bold;
+  word-spacing: 0.1vw;
+  text-align: center; }
 
 header {
   width: 100vw;
@@ -80,12 +117,14 @@ nav {
     border-bottom: 4px solid #ECF87F;
     text-decoration: none;
     color: white;
-    transform: translateY(-1.2vh); }
+    transform: translateY(-1.2vh);
+    transform: translateY(-4px);
+    box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px fadeout(#3D550C, 75), 0 83px 4px 0px fadeout(#3D550C, 5); }
 
 #carouselExampleCaptions {
   position: relative;
   overflow: hidden;
-  border-radius: 100% 0 0 0 / 30%; }
+  border-radius: 60% 0 60% 0/ 30%; }
 
 .imagenBack {
   background-image: url("../multimedia/venus-legacy-3.jpg");
@@ -97,14 +136,33 @@ nav {
   justify-content: center;
   align-items: center;
   border: 1px solid #3D550C; }
-  .imagenBack h1 {
-    font-family: "Cormorant Upright", serif;
-    color: #81B622;
-    text-shadow: 0.2vw 0.2vh #59981A;
-    font-size: 7vw;
-    font-weight: bold;
-    word-spacing: 0.1vw;
-    text-align: center; }
+
+h1 {
+  font-family: "Cormorant Upright", serif;
+  color: #81B622;
+  text-shadow: 0.2vw 0.2vh #59981A;
+  font-size: 5vw;
+  font-weight: bold;
+  word-spacing: 0.1vw;
+  text-align: center;
+  margin-bottom: 10vh; }
+
+h2, h3 {
+  font-family: "Cormorant Upright", serif;
+  color: #3D550C;
+  font-weight: bold;
+  word-spacing: 0.1vw;
+  text-align: center; }
+
+h4 {
+  font-family: "Cormorant Upright", serif;
+  color: #ECF87F;
+  text-align: center; }
+
+h5 {
+  font-family: "Cormorant Upright", serif;
+  color: #ECF87F;
+  text-align: center; }
 
 .backgroundColor {
   background-color: #59981A;
@@ -113,12 +171,15 @@ nav {
   border: none;
   margin: 3vh 2vw 5vh 2vw;
   background-color: #81B622;
-  border-radius: 0 0 100% 0 / 30%; }
+  border-radius: 0 100% 0 100% / 30%; }
 
 .imgUp {
   width: 30vw;
   height: 50vh;
-  border-radius: 100% 0 0 0 / 30%; }
+  border-radius: 100% 0 100% 0 / 30%; }
+
+.card, .btn {
+  border-radius: 100% 0 100% 0 / 30%; }
 
 .sectionP {
   padding: 7vh 2vw; }
@@ -131,6 +192,49 @@ p {
   word-spacing: 0.1vw;
   line-height: 2vw;
   text-align: center; }
+
+/* NOSOTROS */
+.cinco {
+  display: flex;
+  justify-content: space-evenly; }
+
+.cincoSeis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vh 4vw 1vh 4vw; }
+
+.quien {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 30vh;
+  padding: 5vw; }
+
+.quien p {
+  font-weight: 700;
+  color: #59981A;
+  font-size: 4vw;
+  padding: 0.25em; }
+
+.cincoSeis img {
+  border-radius: 100%; }
+
+.cincoSeis .nombre {
+  font-weight: 500;
+  color: #3D550C;
+  font-size: 2vw;
+  text-transform: capitalize;
+  margin: 5vh 0; }
+
+.cincoSeis .matricula {
+  font-weight: 400;
+  color: #59981A;
+  font-size: 1.5vw;
+  text-transform: uppercase; }
+
+img {
+  border-radius: 100% 0 0 0 / 30%; }
 
 .imagenTabla {
   display: flex;
@@ -163,8 +267,8 @@ p {
 
 form {
   font-family: "Cormorant Upright", serif;
-  font-size: 4vh;
-  margin: 10vh 20vw 10vh;
+  font-size: 3vh;
+  margin: 10vh 18vw 10vh;
   color: #81B622; }
 
 .location, .signDate, .nameDatePhon {
@@ -175,13 +279,18 @@ input {
   padding: 1vh 2vw 0 2vw;
   margin: 0 1vw 0 0.5vw;
   border: none;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid #3D550C;
+  background-color: #ECF87F;
+  color: #3D550C; }
 
 .closestSchool, .positionPlay, .size, .signDate {
   display: flex; }
 
+.wholeLine1 {
+  margin-left: 5vw; }
+
 .wholeLine input {
-  width: 42.5vw; }
+  width: 76%; }
 
 .location input {
   width: 20.5vw; }
@@ -191,6 +300,9 @@ div {
 
 div p {
   margin-bottom: 2vh; }
+
+.horarioAtencion {
+  text-align: center; }
 
 .infoImportant {
   padding: 2vw; }
@@ -206,24 +318,43 @@ div p {
   justify-content: center;
   align-items: center; }
 
+#as {
+  font-family: "Cormorant Upright", serif;
+  font-weight: bold;
+  color: #3D550C;
+  font-size: 1.5vw;
+  text-transform: capitalize;
+  text-align: center;
+  margin-left: 0.5vw;
+  transition: transform 1s;
+  border-bottom: 4px solid #81B622;
+  text-decoration: none; }
+
+#as:hover {
+  border-bottom: 4px solid white;
+  text-decoration: none;
+  color: #59981A;
+  transform: translateY(-1.2vh); }
+
 footer {
   position: relative;
   overflow: hidden;
   border-radius: 100% 0 0 0 / 30%;
   background: #ECF87F;
   width: 100vw;
-  height: 100vh;
+  height: 45vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   box-shadow: inset 0 -0.5em 1em rgba(0, 0, 0, 0.4), 0 0 0 2px #59981A, 0.5em 0.5em 2.5em black; }
   footer .logoTiny {
     width: 15vw;
-    height: 30vh; }
+    height: 33vh;
+    padding: 2vh 2vh 2vw;
+    border-radius: 0; }
   footer div.social-media-links {
-    /* background: $color-inst7; */
     overflow: hidden;
-    padding-bottom: 4px;
+    padding-top: 2vh;
     text-align: center; }
     footer div.social-media-links ul {
       margin: 0;
@@ -243,14 +374,14 @@ footer {
       transition: .2s ease-in;
       width: 10vw; }
       footer div.social-media-links a svg {
-        left: 20px;
+        left: -0.5vw;
         position: absolute;
-        top: 20px;
-        height: 50px;
-        width: 50px; }
+        top: 6vh;
+        width: 10vw;
+        height: 10vh; }
         footer div.social-media-links a svg.glow path, footer div.social-media-links a svg.glow circle {
           fill: rgba(0, 0, 0, 0); }
-        footer div.social-media-links a svg path, footer div.social-media-links a svg circle {
+        footer div.social-media-links a svg path, footer div.social-media-links a svg circle, footer div.social-media-links a svg .logoTiny {
           fill: #3D550C;
           transition: .2s ease-in; }
     footer div.social-media-links a:hover {
