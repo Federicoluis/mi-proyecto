@@ -5,61 +5,11 @@
   list-style: none;
   text-decoration: none; }
 
-html {
-  font-family: sans-serif;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent; }
-
 body {
   background-color: #ECF87F; }
 
-article, footer, header, main, nav, section {
-  display: block; }
-
-.imgCorporal, .imgFacial {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70vw 90vh;
-  width: 60vw;
-  height: 90vh; }
-
-.imgCorporal {
-  background-image: url("../multimedia/cooltech-1080x812.png");
-  border-radius: 0 100% 0 0 / 30%; }
-
-.imgFacial {
-  background-image: url("/multimedia/facial-black-1200x902-a-1080x812.png");
-  border-radius: 100% 0 0 0 / 30%; }
-
-.palabraMargen {
-  font-family: "Cormorant Upright", serif;
-  color: #81B622;
-  font-size: 7vw;
-  font-weight: bold;
-  word-spacing: 0.1vw;
-  text-align: center;
-  margin: 10vh 0; }
-
-.palabraMargen1 {
-  font-family: "Cormorant Upright", serif;
-  color: #3D550C;
-  font-size: 7vw;
-  font-weight: bold;
-  word-spacing: 0.1vw;
-  text-align: center;
-  margin: 10vh 0; }
-
-h1 {
-  font-family: "Cormorant Upright", serif;
-  color: #81B622;
-  text-shadow: 0.2vw 0.2vh #59981A;
-  font-size: 7vw;
-  font-weight: bold;
-  word-spacing: 0.1vw;
-  text-align: center; }
+a {
+  text-decoration: none; }
 
 header {
   width: 100vw;
@@ -81,9 +31,14 @@ header {
     color: #3D550C;
     text-transform: capitalize;
     padding: 1vw;
+    margin: 1vh 0;
     text-align: center;
     text-shadow: #59981A;
+    transition: transform 2s;
     animation: aparecer 5s ease-in-out infinite; }
+  header .header__titulo:hover {
+    font-size: 4.01vw;
+    transform: translateY(-1.2vh); }
 
 @keyframes aparecer {
   0% {
@@ -101,42 +56,82 @@ nav {
   margin: 1vh 3vw 0 0;
   display: flex;
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+  display: flex;
+  justify-content: space-around; }
   nav a {
     font-family: "Cormorant Upright", serif;
     font-weight: bold;
     color: #ECF87F;
-    font-size: 1.8vw;
+    font-size: 2vw;
     text-transform: capitalize;
     text-align: center;
-    margin-left: 0.5vw;
+    margin-left: 1vw;
     transition: transform 1s;
     border-bottom: 4px solid white;
+    border-radius: 15%;
     text-decoration: none; }
   nav a:hover {
     border-bottom: 4px solid #ECF87F;
     text-decoration: none;
     color: white;
     transform: translateY(-1.2vh);
-    transform: translateY(-4px);
     box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px fadeout(#3D550C, 75), 0 83px 4px 0px fadeout(#3D550C, 5); }
+  nav a:active {
+    font-family: "Cormorant Upright", serif;
+    font-weight: bold;
+    color: #ECF87F;
+    font-size: 1.9vw;
+    text-transform: capitalize;
+    text-align: center;
+    margin-left: 1vw; }
 
+/* CAROUSEL */
 #carouselExampleCaptions {
   position: relative;
   overflow: hidden;
   border-radius: 60% 0 60% 0/ 30%; }
+  #carouselExampleCaptions .palabraMargen {
+    font-family: "Cormorant Upright", serif;
+    color: #81B622;
+    font-size: 7vw;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 10vh 0; }
+  #carouselExampleCaptions .palabraMargen1 {
+    font-family: "Cormorant Upright", serif;
+    color: #3D550C;
+    font-size: 7vw;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 10vh 0; }
+  #carouselExampleCaptions img {
+    width: 100vw;
+    height: 100vh;
+    opacity: .8;
+    border: 5px solid #59981A; }
 
-.imagenBack {
-  background-image: url("../multimedia/venus-legacy-3.jpg");
-  background-size: cover;
-  background-position: top;
-  width: 100vw;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #3D550C; }
+/* IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
+.imgCorporal, .imgFacial {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 95vw;
+  height: 100vh;
+  background-size: 100%;
+  box-shadow: inset 0.6em 0.6em 0.6em 4em rgba(0, 0, 0, 0.8), 0.6em 0.6em 0.6em 0.6em rgba(0, 0, 0, 0.8); }
 
+.imgCorporal {
+  background-image: url("../multimedia/background.jpg");
+  border-radius: 0 100% 0 0 / 30%; }
+
+.imgFacial {
+  background-image: url("../multimedia/tratamiento-facial-natural.webp");
+  border-radius: 100% 0  0 0 / 30%; }
+
+/* FIN IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
+/* CARACTERISTICAS TIPOGRAFICAS */
 h1 {
   font-family: "Cormorant Upright", serif;
   color: #81B622;
@@ -152,7 +147,8 @@ h2, h3 {
   color: #3D550C;
   font-weight: bold;
   word-spacing: 0.1vw;
-  text-align: center; }
+  text-align: center;
+  text-shadow: 1px 1px #ECF87F; }
 
 h4 {
   font-family: "Cormorant Upright", serif;
@@ -164,36 +160,77 @@ h5 {
   color: #ECF87F;
   text-align: center; }
 
-.backgroundColor {
-  background-color: #59981A;
-  width: 40vw;
-  height: 45vh;
-  border: none;
-  margin: 3vh 2vw 5vh 2vw;
-  background-color: #81B622;
-  border-radius: 0 100% 0 100% / 30%; }
-
-.imgUp {
-  width: 30vw;
-  height: 50vh;
-  border-radius: 100% 0 100% 0 / 30%; }
-
-.card, .btn {
-  border-radius: 100% 0 100% 0 / 30%; }
-
-.sectionP {
-  padding: 7vh 2vw; }
-  .sectionP .sectionP__texto {
-    color: #3D550C; }
-
 p {
   font-family: "Cormorant Upright", serif;
-  font-size: 1.5vw;
+  font-size: 1.7vw;
   word-spacing: 0.1vw;
   line-height: 2vw;
   text-align: center; }
 
+/* FIN CARACTERISTICAS TIPOGRAFICAS */
+/* DISEÑOS DE CARDS */
+.backgroundColor {
+  background-color: #59981A;
+  width: 35vw;
+  height: 55vh;
+  border: none;
+  margin: 3vh 2vw 5vh 2vw;
+  background-color: #81B622;
+  border-radius: 0 100% 0 100% / 30%; }
+  .backgroundColor .imgUp {
+    width: 30vw;
+    height: 50vh;
+    border-radius: 100% 0 100% 0 / 30%;
+    border: 10px solid #ECF87F; }
+
+.card {
+  border-radius: 100% 0 100% 0 / 30%;
+  border: 10px solid #81B622 !important;
+  background-color: #ECF87F;
+  width: 30vw;
+  height: 50vh !important; }
+
+.btn {
+  border-radius: 100% 0 100% 0 / 30%;
+  background-color: #59981A;
+  border: 2px solid #81B622 !important; }
+
+/* INDEX */
+.sectionP {
+  background-color: #81B622;
+  width: 100vw;
+  height: 84vh;
+  margin: 10vh 0;
+  box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 100% 0 100% 0 / 30%; }
+  .sectionP .tituloSectionP {
+    margin-top: 4vh; }
+  .sectionP .sectionP__texto {
+    color: #ECF87F;
+    text-align: center;
+    padding: 2vh 3vw; }
+  .sectionP .sectionP__texto1 {
+    color: #3D550C;
+    text-align: center;
+    padding: 2vh 3vw; }
+
+/* FIN INDEX */
 /* NOSOTROS */
+.sectionP2 {
+  background-color: #81B622;
+  width: 70vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+  margin-bottom: 15vh;
+  border-radius: 100% 0 100% 0 / 30%; }
+
 .cinco {
   display: flex;
   justify-content: space-evenly; }
@@ -236,35 +273,7 @@ p {
 img {
   border-radius: 100% 0 0 0 / 30%; }
 
-.imagenTabla {
-  display: flex;
-  justify-content: center; }
-  .imagenTabla .imagenTabla__imagen {
-    animation: resaltar 2s; }
-
-@keyframes resaltar {
-  0% {
-    transform: scale(1); }
-  50% {
-    transform: scale(1); }
-  100% {
-    transform: scale(1); } }
-
-.estetica1 {
-  background-image: url("images/estetica1.jpg"); }
-
-.estetica2 {
-  background-image: url("images/estetica2.jpg"); }
-
-.estetica3 {
-  background-image: url("images/estetica3.jpg"); }
-
-.estetica4 {
-  background-image: url("images/estetica4.jpg"); }
-
-.estetica5 {
-  background-image: url("images/estetica5.jpg"); }
-
+/* CONTACTO */
 form {
   font-family: "Cormorant Upright", serif;
   font-size: 3vh;
@@ -304,6 +313,10 @@ div p {
 .horarioAtencion {
   text-align: center; }
 
+iframe {
+  border-radius: 40%; }
+
+/* FIN CONTACTO */
 .infoImportant {
   padding: 2vw; }
 
@@ -318,24 +331,7 @@ div p {
   justify-content: center;
   align-items: center; }
 
-#as {
-  font-family: "Cormorant Upright", serif;
-  font-weight: bold;
-  color: #3D550C;
-  font-size: 1.5vw;
-  text-transform: capitalize;
-  text-align: center;
-  margin-left: 0.5vw;
-  transition: transform 1s;
-  border-bottom: 4px solid #81B622;
-  text-decoration: none; }
-
-#as:hover {
-  border-bottom: 4px solid white;
-  text-decoration: none;
-  color: #59981A;
-  transform: translateY(-1.2vh); }
-
+/* FOOTER */
 footer {
   position: relative;
   overflow: hidden;
@@ -343,13 +339,14 @@ footer {
   background: #ECF87F;
   width: 100vw;
   height: 45vh;
+  margin-top: 15vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   box-shadow: inset 0 -0.5em 1em rgba(0, 0, 0, 0.4), 0 0 0 2px #59981A, 0.5em 0.5em 2.5em black; }
   footer .logoTiny {
-    width: 15vw;
-    height: 33vh;
+    width: 15%;
+    height: 15%;
     padding: 2vh 2vh 2vw;
     border-radius: 0; }
   footer div.social-media-links {
@@ -394,3 +391,23 @@ footer {
           fill: fadeout(#3D550C, 40); }
       footer div.social-media-links a:hover svg path, footer div.social-media-links a:hover svg circle {
         fill: #59981A; }
+
+#as {
+  font-family: "Cormorant Upright", serif;
+  font-weight: bold;
+  color: #3D550C;
+  font-size: 1.5vw;
+  text-transform: capitalize;
+  text-align: center;
+  margin-left: 0.5vw;
+  transition: transform 1s;
+  border-bottom: 4px solid #81B622;
+  text-decoration: none; }
+
+#as:hover {
+  border-bottom: 4px solid white;
+  text-decoration: none;
+  color: #59981A;
+  transform: translateY(-1.2vh); }
+
+/* FIN FOOTER */
