@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 5vh 0;
+  margin-bottom: 5vh;
   position: relative;
   overflow: hidden;
   border-radius: 0 0 100% 0 / 30%;
@@ -87,31 +87,55 @@ nav {
     margin-left: 1vw; }
 
 /* CAROUSEL */
-#carouselExampleCaptions {
+/* #carouselExampleCaptions{
   position: relative;
-  overflow: hidden;
-  border-radius: 60% 0 60% 0/ 30%; }
-  #carouselExampleCaptions .palabraMargen {
+  border-radius: 60% 0 60% 0/ 30%;
+  max-height: none;
+    height: 100%;
+    width: 100%;
+    
+  .palabraMargen{
     font-family: "Cormorant Upright", serif;
-    color: #81B622;
-    font-size: 7vw;
-    font-weight: bold;
-    word-spacing: 0.1vw;
-    text-align: center;
-    margin: 10vh 0; }
-  #carouselExampleCaptions .palabraMargen1 {
+      color: $color-inst1;   
+      font-size: 7vw; 
+      font-weight: bold;     
+      word-spacing: 0.1vw;
+      text-align: center;
+      margin: 10vh 0;     
+      position: relative;
+  }
+  .palabraMargen1{
     font-family: "Cormorant Upright", serif;
-    color: #3D550C;
-    font-size: 7vw;
-    font-weight: bold;
-    word-spacing: 0.1vw;
-    text-align: center;
-    margin: 10vh 0; }
-  #carouselExampleCaptions img {
-    width: 100vw;
-    height: 100vh;
-    opacity: .8;
-    border: 5px solid #59981A; }
+      color: $color-inst3;   
+      font-size: 7vw; 
+      font-weight: bold;     
+      word-spacing: 0.1vw;
+      text-align: center;
+      margin: 10vh 0;      
+  }
+  img{
+    @include sizes(100%, 100%); 
+    opacity: .8;       
+    border: 5px solid $color-inst2 ;
+  }
+} */
+.palabraMargen {
+  font-family: "Cormorant Upright", serif;
+  color: #81B622;
+  font-size: 7vw;
+  font-weight: bold;
+  word-spacing: 0.1vw;
+  text-align: center;
+  margin: 10vh 0; }
+
+.palabraMargen1 {
+  font-family: "Cormorant Upright", serif;
+  color: #3D550C;
+  font-size: 7vw;
+  font-weight: bold;
+  word-spacing: 0.1vw;
+  text-align: center;
+  margin: 10vh 0; }
 
 /* IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
 .imgCorporal, .imgFacial {
@@ -178,8 +202,8 @@ p {
   background-color: #81B622;
   border-radius: 0 100% 0 100% / 30%; }
   .backgroundColor .imgUp {
-    width: 30vw;
-    height: 50vh;
+    width: 100%;
+    height: 100%;
     border-radius: 100% 0 100% 0 / 30%;
     border: 10px solid #ECF87F; }
 
@@ -411,3 +435,45 @@ footer {
   transform: translateY(-1.2vh); }
 
 /* FIN FOOTER */
+/* GRID */
+#grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "header header" "pseudoCarousel pseudoCarousel"     "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+  #grid header {
+    grid-area: header; }
+  #grid .pseudoCarousel {
+    grid-area: pseudoCarousel; }
+  #grid section.sectionP {
+    grid-area: sectionP; }
+  #grid section#infoCards {
+    grid-area: infoCards; }
+  #grid section#infoCards2 {
+    grid-area: infoCards2; }
+  #grid footer {
+    grid-area: footer; }
+
+@media only screen and (max-width: 320px) {
+  #grid {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header" "sectionP sectionP" "infoCards infoCards" "infoCards2 infoCards2" "footer footer";
+    /* #carouselExampleCaptions {
+        grid-area: carousel;     
+     } */ }
+    #grid header {
+      grid-area: header; }
+    #grid section.sectionP {
+      grid-area: sectionP; }
+    #grid section#infoCards {
+      grid-area: infoCards; }
+    #grid section#infoCards2 {
+      grid-area: infoCards2; }
+    #grid footer {
+      grid-area: footer; } }

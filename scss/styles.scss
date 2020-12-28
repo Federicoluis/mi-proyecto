@@ -24,7 +24,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;   
-  margin: 0 0 5vh 0;  
+  margin-bottom: 5vh;  
   position: relative;
   overflow: hidden;
   border-radius: 0 0 100% 0 / 30%; 
@@ -103,10 +103,13 @@ nav {
       } 
 }  
 /* CAROUSEL */
-#carouselExampleCaptions{
+/* #carouselExampleCaptions{
   position: relative;
-  overflow: hidden;
   border-radius: 60% 0 60% 0/ 30%;
+  max-height: none;
+    height: 100%;
+    width: 100%;
+    
   .palabraMargen{
     font-family: "Cormorant Upright", serif;
       color: $color-inst1;   
@@ -114,7 +117,8 @@ nav {
       font-weight: bold;     
       word-spacing: 0.1vw;
       text-align: center;
-      margin: 10vh 0;      
+      margin: 10vh 0;     
+      position: relative;
   }
   .palabraMargen1{
     font-family: "Cormorant Upright", serif;
@@ -126,11 +130,34 @@ nav {
       margin: 10vh 0;      
   }
   img{
-    @include sizes(100vw, 100vh); 
+    @include sizes(100%, 100%); 
     opacity: .8;       
     border: 5px solid $color-inst2 ;
   }
+} */
+
+
+.palabraMargen{
+  font-family: "Cormorant Upright", serif;
+    color: $color-inst1;   
+    font-size: 7vw; 
+    font-weight: bold;     
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 10vh 0;    
+    
 }
+.palabraMargen1{
+  font-family: "Cormorant Upright", serif;
+    color: $color-inst3;   
+    font-size: 7vw; 
+    font-weight: bold;     
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 10vh 0;      
+}  
+
+
 /* IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
 .imgCorporal, .imgFacial{          
   background-repeat: no-repeat;
@@ -197,7 +224,7 @@ p {
   background-color: $color-inst1;
   border-radius: 0 100% 0 100% / 30%;
   .imgUp{
-    @include sizes(30vw, 50vh);   
+    @include sizes(100%, 100%);   
     border-radius: 100% 0 100% 0 / 30%; 
     border: 10px solid $color-inst4;
     }    
@@ -223,7 +250,8 @@ p {
       justify-content: center;
       align-items: center;
       flex-direction: column;  
-      border-radius: 100% 0 100% 0 / 30%;    
+      border-radius: 100% 0 100% 0 / 30%;  
+        
     .tituloSectionP{
         margin-top: 4vh;
     }    
@@ -320,7 +348,6 @@ input {
 }
 .closestSchool, .positionPlay,.size, .signDate{
   display: flex;
-
 }
 .wholeLine1{
   margin-left: 5vw; 
@@ -455,4 +482,79 @@ footer {
 }
 
  /* FIN FOOTER */
+
+/* GRID */
+
+#grid {
+  display: grid; 
+  @include sizes(100vw, 100vh);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;   
+  grid-template-columns:1fr 1fr;
+  
+  grid-template-areas:
+    "header header"
+    "pseudoCarousel pseudoCarousel"    
+    "sectionP sectionP"       
+    "infoCards infoCards"
+    "infoCards2 infoCards2"
+    "footer footer";
+
+  header {
+    grid-area: header;
+ } 
+ .pseudoCarousel {
+    grid-area: pseudoCarousel;     
+ }
+
+  section.sectionP {
+    grid-area: sectionP;     
+ }
+  section#infoCards {
+    grid-area: infoCards;
+ }
+  section#infoCards2 {
+    grid-area: infoCards2;
+ }
+  footer {
+    grid-area: footer;
+} 
+}
+
+@media only screen and (max-width: 320px) {
+  
+    #grid {
+      display: grid; 
+      @include sizes(100vw, 100vh);
+      grid-template-rows: 1fr /* 2fr */ 1fr 1fr 1fr 1fr;   
+      grid-template-columns:1fr 1fr;
+      
+      grid-template-areas:
+        "header header"
+        /* "carousel carousel" */
+        "sectionP sectionP"
+        "infoCards infoCards"
+        "infoCards2 infoCards2"
+        "footer footer";
+    
+      header {
+        grid-area: header;
+     } 
+      /* #carouselExampleCaptions {
+        grid-area: carousel;     
+     } */
+      section.sectionP {
+        grid-area: sectionP;     
+     }
+      section#infoCards {
+        grid-area: infoCards;
+     }
+      section#infoCards2 {
+        grid-area: infoCards2;
+     }
+      footer {
+        grid-area: footer;
+    } 
+    }
+    }
+  
 
