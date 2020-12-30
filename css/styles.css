@@ -11,6 +11,9 @@ body {
 a {
   text-decoration: none; }
 
+a:hover {
+  text-decoration: none; }
+
 header {
   width: 100vw;
   height: 30vh;
@@ -86,39 +89,92 @@ nav {
     text-align: center;
     margin-left: 1vw; }
 
-/* CAROUSEL */
-/* #carouselExampleCaptions{
+@keyframes miAnimacion {
+  0% {
+    opacity: 1; }
+  40% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  60% {
+    opacity: 0; }
+  70% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes miAnimacion {
+  0% {
+    opacity: 1; }
+  40% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  60% {
+    opacity: 0; }
+  70% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@-moz-keyframes miAnimacion {
+  0% {
+    opacity: 1; }
+  40% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  60% {
+    opacity: 0; }
+  70% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+.pseudoCarousel #fondo1, .pseudoCarousel #fondo3 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: url(../multimedia/home-black.png);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80% 0 80% 0 / 20%;
+  box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+  animation: miAnimacion 12s ease-in 0s infinite;
+  -webkit-animation: miAnimacion 12s ease-in 0s infinite;
+  -moz-animation: miAnimacion 12s ease-in 0s infinite; }
+
+.pseudoCarousel #fondo2, .pseudoCarousel #fondo4 {
   position: relative;
-  border-radius: 60% 0 60% 0/ 30%;
-  max-height: none;
-    height: 100%;
-    width: 100%;
-    
-  .palabraMargen{
-    font-family: "Cormorant Upright", serif;
-      color: $color-inst1;   
-      font-size: 7vw; 
-      font-weight: bold;     
-      word-spacing: 0.1vw;
-      text-align: center;
-      margin: 10vh 0;     
-      position: relative;
-  }
-  .palabraMargen1{
-    font-family: "Cormorant Upright", serif;
-      color: $color-inst3;   
-      font-size: 7vw; 
-      font-weight: bold;     
-      word-spacing: 0.1vw;
-      text-align: center;
-      margin: 10vh 0;      
-  }
-  img{
-    @include sizes(100%, 100%); 
-    opacity: .8;       
-    border: 5px solid $color-inst2 ;
-  }
-} */
+  width: 100%;
+  height: 100vh;
+  background: url(../multimedia/home-2-black.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 80% 0 80% 0 / 20%;
+  box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+  animation: miAnimacion 12s ease-in 6s infinite;
+  -webkit-animation: miAnimacion 12s ease-in 6s infinite;
+  -moz-animation: miAnimacion 12s ease-in 6s infinite; }
+
+.pseudoCarousel #fondo3 {
+  background: url(../multimedia/depilacion.jpg);
+  background-position: center;
+  background-size: cover; }
+
+.pseudoCarousel #fondo4 {
+  background: url(../multimedia/cooltech.png);
+  background-position: center;
+  background-size: cover; }
+
 .palabraMargen {
   font-family: "Cormorant Upright", serif;
   color: #81B622;
@@ -141,18 +197,24 @@ nav {
 .imgCorporal, .imgFacial {
   background-repeat: no-repeat;
   background-position: center;
-  width: 95vw;
+  width: 100%;
   height: 100vh;
   background-size: 100%;
-  box-shadow: inset 0.6em 0.6em 0.6em 4em rgba(0, 0, 0, 0.8), 0.6em 0.6em 0.6em 0.6em rgba(0, 0, 0, 0.8); }
+  box-shadow: inset 0.4em 0.4em 0.4em 4em rgba(0, 0, 0, 0.8), 0.4em 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.8); }
 
 .imgCorporal {
   background-image: url("../multimedia/background.jpg");
-  border-radius: 0 100% 0 0 / 30%; }
+  border-radius: 100% 0 0 0 / 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .imgFacial {
   background-image: url("../multimedia/tratamiento-facial-natural.webp");
-  border-radius: 100% 0  0 0 / 30%; }
+  border-radius: 100% 0  0 0 / 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
 
 /* FIN IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
 /* CARACTERISTICAS TIPOGRAFICAS */
@@ -211,8 +273,9 @@ p {
   border-radius: 100% 0 100% 0 / 30%;
   border: 10px solid #81B622 !important;
   background-color: #ECF87F;
-  width: 30vw;
-  height: 50vh !important; }
+  width: 100%;
+  height: 55vh;
+  text-align: start !important; }
 
 .btn {
   border-radius: 100% 0 100% 0 / 30%;
@@ -220,7 +283,7 @@ p {
   border: 2px solid #81B622 !important; }
 
 /* INDEX */
-.sectionP {
+.sectionP, .sectionP2 {
   background-color: #81B622;
   width: 100vw;
   height: 84vh;
@@ -231,52 +294,46 @@ p {
   align-items: center;
   flex-direction: column;
   border-radius: 100% 0 100% 0 / 30%; }
-  .sectionP .tituloSectionP {
+  .sectionP .tituloSectionP, .sectionP2 .tituloSectionP {
     margin-top: 4vh; }
-  .sectionP .sectionP__texto {
+  .sectionP .sectionP__texto, .sectionP2 .sectionP__texto {
     color: #ECF87F;
     text-align: center;
     padding: 2vh 3vw; }
-  .sectionP .sectionP__texto1 {
-    color: #3D550C;
-    text-align: center;
-    padding: 2vh 3vw; }
+    .sectionP .sectionP__texto .sectionP__texto1, .sectionP2 .sectionP__texto .sectionP__texto1 {
+      color: #3D550C;
+      text-align: center;
+      padding: 2vh 3vw; }
 
 /* FIN INDEX */
 /* NOSOTROS */
 .sectionP2 {
   background-color: #81B622;
-  width: 70vw;
-  height: 60vh;
+  width: 90vw;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
-  margin-bottom: 15vh;
-  border-radius: 100% 0 100% 0 / 30%; }
+  margin: 10vh 10vh;
+  border-radius: 1% 100% 1% 100% / 20%; }
 
 .cinco {
   display: flex;
-  justify-content: space-evenly; }
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 40vh;
+  margin-bottom: 10vh;
+  position: relative;
+  padding-bottom: 5vh; }
 
 .cincoSeis {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1vh 4vw 1vh 4vw; }
-
-.quien {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  height: 30vh;
-  padding: 5vw; }
-
-.quien p {
-  font-weight: 700;
-  color: #59981A;
-  font-size: 4vw;
-  padding: 0.25em; }
+  padding: 1vh 4vw 1vh 4vw;
+  width: 33%;
+  height: 100vh; }
 
 .cincoSeis img {
   border-radius: 100%; }
@@ -303,30 +360,23 @@ form {
   font-size: 3vh;
   margin: 10vh 18vw 10vh;
   color: #81B622; }
-
-.location, .signDate, .nameDatePhon {
-  display: flex;
-  flex-direction: row; }
-
-input {
-  padding: 1vh 2vw 0 2vw;
-  margin: 0 1vw 0 0.5vw;
-  border: none;
-  border-bottom: 1px solid #3D550C;
-  background-color: #ECF87F;
-  color: #3D550C; }
-
-.closestSchool, .positionPlay, .size, .signDate {
-  display: flex; }
-
-.wholeLine1 {
-  margin-left: 5vw; }
-
-.wholeLine input {
-  width: 76%; }
-
-.location input {
-  width: 20.5vw; }
+  form .location, form .signDate, form .nameDatePhon {
+    display: flex;
+    flex-direction: row; }
+  form input {
+    padding: 1vh 2vw 0 2vw;
+    margin: 0 1vw 0 0.5vw;
+    border: none;
+    background-color: #ECF87F;
+    color: #3D550C; }
+  form .closestSchool, form .positionPlay, form .size, form .signDate {
+    display: flex; }
+  form .wholeLine1 {
+    margin-left: 5vw; }
+  form .wholeLine input {
+    width: 76%; }
+  form .location input {
+    width: 20.5vw; }
 
 div {
   margin-bottom: 1vh; }
@@ -365,9 +415,14 @@ footer {
   height: 45vh;
   margin-top: 15vh;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   box-shadow: inset 0 -0.5em 1em rgba(0, 0, 0, 0.4), 0 0 0 2px #59981A, 0.5em 0.5em 2.5em black; }
+  footer div p {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   footer .logoTiny {
     width: 15%;
     height: 15%;
@@ -436,24 +491,32 @@ footer {
 
 /* FIN FOOTER */
 /* GRID */
-#grid {
+.grid {
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "header header" "pseudoCarousel pseudoCarousel"     "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
-  #grid header {
+  grid-template-areas: "header header" "titulo titulo" "principal principal" "cinco cinco" "sectionP2 sectionP2"     "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+  .grid header {
     grid-area: header; }
-  #grid .pseudoCarousel {
+  .grid h1 {
+    grid-area: titulo; }
+  .grid section.sectionP2 {
+    grid-area: sectionP2; }
+  .grid section.cinco {
+    grid-area: cinco; }
+  .grid .pseudoCarousel {
     grid-area: pseudoCarousel; }
-  #grid section.sectionP {
+  .grid .principal {
+    grid-area: principal; }
+  .grid .sectionP {
     grid-area: sectionP; }
-  #grid section#infoCards {
+  .grid .infoCards {
     grid-area: infoCards; }
-  #grid section#infoCards2 {
+  .grid .infoCards2 {
     grid-area: infoCards2; }
-  #grid footer {
+  .grid footer {
     grid-area: footer; }
 
 @media only screen and (max-width: 320px) {
