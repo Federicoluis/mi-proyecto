@@ -617,7 +617,8 @@ footer {
   h4 {
     font-family: "Cormorant Upright", serif;
     color: #ECF87F;
-    text-align: center; }
+    text-align: center;
+    font-size: 4vw; }
   h5 {
     font-family: "Cormorant Upright", serif;
     color: #ECF87F;
@@ -800,7 +801,7 @@ footer {
   /* FOOTER */
   footer {
     width: 100vw;
-    height: 35vh; }
+    height: 30vh; }
   /* FIN FOOTER */
   .grid {
     display: grid;
@@ -808,7 +809,7 @@ footer {
     height: 100vh;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: "header" "titulo" "principal" "cinco" "sectionP2"     "pseudoCarousel"             "sectionP"        "infoCards" "infoCards2" "footer"; }
+    grid-template-areas: "header header" "titulo titulo" "principal principal" "cinco cinco" "sectionP2 sectionP2"     "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
     .grid header {
       grid-area: header; }
     .grid h1 {
