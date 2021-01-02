@@ -89,6 +89,7 @@ nav {
     text-align: center;
     margin-left: 1vw; }
 
+/* CAROUSEL */
 @keyframes miAnimacion {
   0% {
     opacity: 1; }
@@ -175,6 +176,7 @@ nav {
   background-position: center;
   background-size: cover; }
 
+/* FIN CAROUSEL */
 .palabraMargen {
   font-family: "Cormorant Upright", serif;
   color: #81B622;
@@ -197,10 +199,11 @@ nav {
 .imgCorporal, .imgFacial {
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
-  height: 100vh;
-  background-size: 100%;
-  box-shadow: inset 0.4em 0.4em 0.4em 4em rgba(0, 0, 0, 0.8), 0.4em 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.8); }
+  background-size: cover;
+  width: 100vw;
+  height: 90vh;
+  box-shadow: inset 0.4em 0.4em 0.4em 4em rgba(0, 0, 0, 0.8), 0.4em 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.8);
+  opacity: .8; }
 
 .imgCorporal {
   background-image: url("../multimedia/background.jpg");
@@ -248,7 +251,7 @@ h5 {
 
 p {
   font-family: "Cormorant Upright", serif;
-  font-size: 1.7vw;
+  font-size: 2vw;
   word-spacing: 0.1vw;
   line-height: 2vw;
   text-align: center; }
@@ -265,45 +268,51 @@ p {
   border-radius: 0 100% 0 100% / 30%; }
   .backgroundColor .imgUp {
     width: 100%;
-    height: 100%;
+    height: 45vh;
     border-radius: 100% 0 100% 0 / 30%;
-    border: 10px solid #ECF87F; }
+    border: 10px solid #ECF87F;
+    background-position: center;
+    background-size: cover; }
 
 .card {
   border-radius: 100% 0 100% 0 / 30%;
   border: 10px solid #81B622 !important;
   background-color: #ECF87F;
   width: 100%;
-  height: 55vh;
-  text-align: start !important; }
+  height: 64vh;
+  text-align: start !important;
+  padding: 4vh 1vw; }
 
 .btn {
   border-radius: 100% 0 100% 0 / 30%;
   background-color: #59981A;
   border: 2px solid #81B622 !important; }
 
+/* FIN DISEÑOS DE CARDS */
 /* INDEX */
 .sectionP, .sectionP2 {
   background-color: #81B622;
   width: 100vw;
-  height: 84vh;
+  height: 86vh;
   margin: 10vh 0;
   box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 100% 0 100% 0 / 30%; }
+  border-radius: 0 100% 0 100% / 20%;
+  padding: 5vh 2vw; }
   .sectionP .tituloSectionP, .sectionP2 .tituloSectionP {
-    margin-top: 4vh; }
+    margin-top: 4vh;
+    padding: 2vh 10vw; }
   .sectionP .sectionP__texto, .sectionP2 .sectionP__texto {
     color: #ECF87F;
     text-align: center;
-    padding: 2vh 3vw; }
-    .sectionP .sectionP__texto .sectionP__texto1, .sectionP2 .sectionP__texto .sectionP__texto1 {
-      color: #3D550C;
-      text-align: center;
-      padding: 2vh 3vw; }
+    padding: 2vh 5vw; }
+  .sectionP .sectionP__texto1, .sectionP2 .sectionP__texto1 {
+    color: #3D550C;
+    text-align: center;
+    padding: 2vh 6vw; }
 
 /* FIN INDEX */
 /* NOSOTROS */
@@ -336,7 +345,8 @@ p {
   height: 100vh; }
 
 .cincoSeis img {
-  border-radius: 100%; }
+  border-radius: 100%;
+  border: 8px solid #ECF87F; }
 
 .cincoSeis .nombre {
   font-weight: 500;
@@ -377,6 +387,9 @@ form {
     width: 76%; }
   form .location input {
     width: 20.5vw; }
+  form .closestSchool {
+    display: flex;
+    justify-content: space-between; }
 
 div {
   margin-bottom: 1vh; }
@@ -388,22 +401,14 @@ div p {
   text-align: center; }
 
 iframe {
-  border-radius: 40%; }
+  border-radius: 10%;
+  width: 40vw;
+  height: 50vh;
+  border: 4px solid #59981A; }
 
 /* FIN CONTACTO */
 .infoImportant {
   padding: 2vw; }
-
-.back {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.seccionCentro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
 
 /* FOOTER */
 footer {
@@ -413,7 +418,6 @@ footer {
   background: #ECF87F;
   width: 100vw;
   height: 45vh;
-  margin-top: 15vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -439,7 +443,7 @@ footer {
       display: inline;
       margin: 0;
       padding: 0; }
-    footer div.social-media-links a {
+    footer div.social-media-links a, footer div.social-media-links div p #as {
       border-bottom: 0px solid rgba(0, 0, 0, 0.95);
       border-radius: 4px;
       box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
@@ -449,26 +453,26 @@ footer {
       position: relative;
       transition: .2s ease-in;
       width: 10vw; }
-      footer div.social-media-links a svg {
+      footer div.social-media-links a svg, footer div.social-media-links div p #as svg {
         left: -0.5vw;
         position: absolute;
         top: 6vh;
         width: 10vw;
         height: 10vh; }
-        footer div.social-media-links a svg.glow path, footer div.social-media-links a svg.glow circle {
+        footer div.social-media-links a svg.glow path, footer div.social-media-links a svg.glow circle, footer div.social-media-links div p #as svg.glow path, footer div.social-media-links div p #as svg.glow circle {
           fill: rgba(0, 0, 0, 0); }
-        footer div.social-media-links a svg path, footer div.social-media-links a svg circle, footer div.social-media-links a svg .logoTiny {
+        footer div.social-media-links a svg path, footer div.social-media-links a svg circle, footer div.social-media-links a svg .logoTiny, footer div.social-media-links div p #as svg path, footer div.social-media-links div p #as svg circle, footer div.social-media-links div p #as svg .logoTiny {
           fill: #3D550C;
           transition: .2s ease-in; }
-    footer div.social-media-links a:hover {
+    footer div.social-media-links a:hover, footer div.social-media-links div p #as:hover {
       transform: translateY(-4px);
       box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px fadeout(#3D550C, 75), 0 83px 4px 0px fadeout(#3D550C, 5); }
-      footer div.social-media-links a:hover svg.glow {
+      footer div.social-media-links a:hover svg.glow, footer div.social-media-links div p #as:hover svg.glow {
         filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
         filter: blur(2px); }
-        footer div.social-media-links a:hover svg.glow path, footer div.social-media-links a:hover svg.glow circle {
+        footer div.social-media-links a:hover svg.glow path, footer div.social-media-links a:hover svg.glow circle, footer div.social-media-links div p #as:hover svg.glow path, footer div.social-media-links div p #as:hover svg.glow circle {
           fill: fadeout(#3D550C, 40); }
-      footer div.social-media-links a:hover svg path, footer div.social-media-links a:hover svg circle {
+      footer div.social-media-links a:hover svg path, footer div.social-media-links a:hover svg circle, footer div.social-media-links div p #as:hover svg path, footer div.social-media-links div p #as:hover svg circle {
         fill: #59981A; }
 
 #as {
@@ -519,24 +523,1045 @@ footer {
   .grid footer {
     grid-area: footer; }
 
-@media only screen and (max-width: 320px) {
-  #grid {
+@media only screen and (max-width: 576px) {
+  header {
+    width: 100vw;
+    height: 17vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 100% 0 / 30%;
+    background-image: linear-gradient(135deg, #81B622 10%, #3D550C 100%);
+    box-shadow: inset 0 -0.5em 1em rgba(0, 0, 0, 0.4), 0 0 0 2px #ECF87F, 0.5em 0.5em 2.5em black; }
+    header .header__titulo {
+      font-family: "Cormorant Upright", serif;
+      font-weight: bold;
+      font-size: 4vw;
+      word-spacing: 0.1vw;
+      color: #3D550C;
+      text-transform: capitalize;
+      padding: 1vw;
+      margin: 1vh 0;
+      text-align: center;
+      text-shadow: #59981A;
+      transition: transform 2s;
+      animation: aparecer 5s ease-in-out infinite; }
+    header .header__titulo:hover {
+      font-size: 4.01vw;
+      transform: translateY(-1.2vh); }
+  @keyframes aparecer {
+    0% {
+      color: #81B622; }
+    25% {
+      color: #59981A; }
+    50% {
+      color: #3D550C; }
+    100% {
+      color: #81B622; } }
+  nav {
+    width: 100vw;
+    height: 10vh;
+    margin: 1vh 3vw 0 0;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly; }
+    nav a {
+      font-family: "Cormorant Upright", serif;
+      font-weight: bold;
+      color: #ECF87F;
+      font-size: 2vw;
+      text-transform: capitalize;
+      text-align: center;
+      margin-left: 1vw;
+      transition: transform 1s;
+      border-bottom: 4px solid white;
+      border-radius: 15%;
+      text-decoration: none; }
+    nav a:hover {
+      border-bottom: 4px solid #ECF87F;
+      text-decoration: none;
+      color: white;
+      transform: translateY(-1.2vh);
+      box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px fadeout(#3D550C, 75), 0 83px 4px 0px fadeout(#3D550C, 5); }
+    nav a:active {
+      font-family: "Cormorant Upright", serif;
+      font-weight: bold;
+      color: #ECF87F;
+      font-size: 1.9vw;
+      text-transform: capitalize;
+      text-align: center;
+      margin-left: 1vw; }
+  /* CARACTERISTICAS TIPOGRAFICAS */
+  h1 {
+    font-family: "Cormorant Upright", serif;
+    color: #81B622;
+    text-shadow: 0.2vw 0.2vh #59981A;
+    font-size: 5vw;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 5vh 0; }
+  h2, h3 {
+    font-family: "Cormorant Upright", serif;
+    color: #3D550C;
+    word-spacing: 0.1vw;
+    text-align: center;
+    text-shadow: 1px 1px #ECF87F;
+    font-size: 4vw; }
+  h4 {
+    font-family: "Cormorant Upright", serif;
+    color: #ECF87F;
+    text-align: center; }
+  h5 {
+    font-family: "Cormorant Upright", serif;
+    color: #ECF87F;
+    text-align: center; }
+  p {
+    font-family: "Cormorant Upright", serif;
+    font-size: 2vw;
+    word-spacing: 0.1vw;
+    line-height: 2vw;
+    text-align: center; }
+  /* FIN CARACTERISTICAS TIPOGRAFICAS */
+  @keyframes miAnimacion {
+    0% {
+      opacity: 1; }
+    40% {
+      opacity: 1; }
+    50% {
+      opacity: 1; }
+    60% {
+      opacity: 0; }
+    70% {
+      opacity: 0; }
+    100% {
+      opacity: 0; } }
+  @-webkit-keyframes miAnimacion {
+    0% {
+      opacity: 1; }
+    40% {
+      opacity: 1; }
+    50% {
+      opacity: 1; }
+    60% {
+      opacity: 0; }
+    70% {
+      opacity: 0; }
+    100% {
+      opacity: 0; } }
+  @-moz-keyframes miAnimacion {
+    0% {
+      opacity: 1; }
+    40% {
+      opacity: 1; }
+    50% {
+      opacity: 1; }
+    60% {
+      opacity: 0; }
+    70% {
+      opacity: 0; }
+    100% {
+      opacity: 0; } }
+  .pseudoCarousel #fondo1, .pseudoCarousel #fondo3 {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    background: url(../multimedia/home-black.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80% 0 80% 0 / 20%;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    animation: miAnimacion 12s ease-in 0s infinite;
+    -webkit-animation: miAnimacion 12s ease-in 0s infinite;
+    -moz-animation: miAnimacion 12s ease-in 0s infinite; }
+  .pseudoCarousel #fondo2, .pseudoCarousel #fondo4 {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: url(../multimedia/home-2-black.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80% 0 80% 0 / 20%;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    animation: miAnimacion 12s ease-in 6s infinite;
+    -webkit-animation: miAnimacion 12s ease-in 6s infinite;
+    -moz-animation: miAnimacion 12s ease-in 6s infinite; }
+  .pseudoCarousel #fondo3 {
+    background: url(../multimedia/depilacion.jpg);
+    background-position: center;
+    background-size: cover; }
+  .pseudoCarousel #fondo4 {
+    background: url(../multimedia/cooltech.png);
+    background-position: center;
+    background-size: cover; }
+  .sectionP, .sectionP2 {
+    background-color: #81B622;
+    width: 100vw;
+    height: 70vh;
+    margin-top: 8vh;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 100% 0 100% / 20%; }
+    .sectionP .tituloSectionP, .sectionP2 .tituloSectionP {
+      margin-top: 4vh;
+      padding: 0 2vw; }
+    .sectionP .sectionP__texto, .sectionP2 .sectionP__texto {
+      color: #ECF87F;
+      text-align: center;
+      padding: 2vh 5vw; }
+    .sectionP .sectionP__texto1, .sectionP2 .sectionP__texto1 {
+      color: #3D550C;
+      text-align: center;
+      padding: 2vh 6vw; }
+  p {
+    font-family: "Cormorant Upright", serif;
+    font-size: 3vw;
+    word-spacing: 0.2vw;
+    line-height: 2.5vw;
+    text-align: center; }
+  /* DISEÑOS DE CARDS */
+  .backgroundColor {
+    width: 90vw;
+    height: 45vh;
+    border: none;
+    margin: 3vh 2vw 5vh 2vw;
+    background-color: #81B622;
+    border-radius: 0 100% 0 100% / 30%; }
+    .backgroundColor .imgUp {
+      width: 100%;
+      height: 40vh;
+      border-radius: 100% 0 100% 0 / 30%;
+      border: 10px solid #ECF87F;
+      background-position: center;
+      background-size: cover; }
+  .card {
+    border-radius: 100% 0 100% 0 / 30%;
+    border: 10px solid #81B622 !important;
+    background-color: #ECF87F;
+    width: 100%;
+    height: 36vh;
+    text-align: start;
+    padding: 1vh 0;
+    margin-right: 3vw; }
+  /* IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
+  .imgCorporal, .imgFacial {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 60vh;
+    box-shadow: inset 0.4em 0.4em 0.4em 4em rgba(0, 0, 0, 0.8), 0.4em 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.8); }
+  .imgCorporal {
+    background-image: url("../multimedia/background.jpg");
+    border-radius: 100% 0 0 0 / 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .imgFacial {
+    background-image: url("../multimedia/tratamiento-facial-natural.webp");
+    border-radius: 100% 0  0 0 / 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  /* FIN IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
+  /* CONTACTO */
+  form {
+    font-family: "Cormorant Upright", serif;
+    font-size: 3vh;
+    margin: 10vh 10vw 10vh;
+    color: #81B622; }
+    form .closestSchool {
+      display: flex;
+      justify-content: space-between; }
+  .infoMap {
+    display: flex;
+    margin-left: 2vw; }
+    .infoMap iframe {
+      border-radius: 10%;
+      background-size: 20vw 20vh; }
+  /* FIN CONTACTO */
+  /* FOOTER */
+  footer {
+    width: 100vw;
+    height: 35vh; }
+  /* FIN FOOTER */
+  .grid {
     display: grid;
     width: 100vw;
     height: 100vh;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "header header" "sectionP sectionP" "infoCards infoCards" "infoCards2 infoCards2" "footer footer";
-    /* #carouselExampleCaptions {
-        grid-area: carousel;     
-     } */ }
-    #grid header {
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "titulo" "principal" "cinco" "sectionP2"     "pseudoCarousel"             "sectionP"        "infoCards" "infoCards2" "footer"; }
+    .grid header {
       grid-area: header; }
-    #grid section.sectionP {
+    .grid h1 {
+      grid-area: titulo; }
+    .grid section.sectionP2 {
+      grid-area: sectionP2; }
+    .grid section.cinco {
+      grid-area: cinco; }
+    .grid .pseudoCarousel {
+      grid-area: pseudoCarousel; }
+    .grid .principal {
+      grid-area: principal; }
+    .grid .sectionP {
       grid-area: sectionP; }
-    #grid section#infoCards {
+    .grid .infoCards {
       grid-area: infoCards; }
-    #grid section#infoCards2 {
+    .grid .infoCards2 {
       grid-area: infoCards2; }
-    #grid footer {
+    .grid footer {
+      grid-area: footer; } }
+
+@media (min-width: 576px) and (max-width: 768px) {
+  header {
+    width: 100vw;
+    height: 17vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5vh;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 100% 0 / 30%;
+    background-image: linear-gradient(135deg, #81B622 10%, #3D550C 100%);
+    box-shadow: inset 0 -0.5em 1em rgba(0, 0, 0, 0.4), 0 0 0 2px #ECF87F, 0.5em 0.5em 2.5em black; }
+    header .header__titulo {
+      font-family: "Cormorant Upright", serif;
+      font-weight: bold;
+      font-size: 4vw;
+      word-spacing: 0.1vw;
+      color: #3D550C;
+      text-transform: capitalize;
+      padding: 1vw;
+      margin: 1vh 0;
+      text-align: center;
+      text-shadow: #59981A;
+      transition: transform 2s;
+      animation: aparecer 5s ease-in-out infinite; }
+    header .header__titulo:hover {
+      font-size: 4.01vw;
+      transform: translateY(-1.2vh); }
+  @keyframes aparecer {
+    0% {
+      color: #81B622; }
+    25% {
+      color: #59981A; }
+    50% {
+      color: #3D550C; }
+    100% {
+      color: #81B622; } }
+  nav {
+    width: 100vw;
+    height: 10vh;
+    margin: 1vh 3vw 0 0;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly; }
+    nav a {
+      font-family: "Cormorant Upright", serif;
+      font-weight: bold;
+      color: #ECF87F;
+      font-size: 2vw;
+      text-transform: capitalize;
+      text-align: center;
+      margin-left: 1vw;
+      transition: transform 1s;
+      border-bottom: 4px solid white;
+      border-radius: 15%;
+      text-decoration: none; }
+    nav a:hover {
+      border-bottom: 4px solid #ECF87F;
+      text-decoration: none;
+      color: white;
+      transform: translateY(-1.2vh);
+      box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px fadeout(#3D550C, 75), 0 83px 4px 0px fadeout(#3D550C, 5); }
+    nav a:active {
+      font-family: "Cormorant Upright", serif;
+      font-weight: bold;
+      color: #ECF87F;
+      font-size: 1.9vw;
+      text-transform: capitalize;
+      text-align: center;
+      margin-left: 1vw; }
+  /* CARACTERISTICAS TIPOGRAFICAS */
+  h1 {
+    font-family: "Cormorant Upright", serif;
+    color: #81B622;
+    text-shadow: 0.2vw 0.2vh #59981A;
+    font-size: 5vw;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 5vh 0; }
+  h2, h3 {
+    font-family: "Cormorant Upright", serif;
+    color: #3D550C;
+    word-spacing: 0.1vw;
+    text-align: center;
+    text-shadow: 1px 1px #ECF87F; }
+  h4 {
+    font-family: "Cormorant Upright", serif;
+    color: #ECF87F;
+    text-align: center; }
+  /* FIN CARACTERISTICAS TIPOGRAFICAS */
+  .pseudoCarousel #fondo1, .pseudoCarousel #fondo3 {
+    position: absolute;
+    width: 100%;
+    height: 60vh;
+    background: url(../multimedia/home-black.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80% 0 80% 0 / 20%;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    animation: miAnimacion 12s ease-in 0s infinite;
+    -webkit-animation: miAnimacion 12s ease-in 0s infinite;
+    -moz-animation: miAnimacion 12s ease-in 0s infinite; }
+  .pseudoCarousel #fondo2, .pseudoCarousel #fondo4 {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background: url(../multimedia/home-2-black.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80% 0 80% 0 / 20%;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    animation: miAnimacion 12s ease-in 6s infinite;
+    -webkit-animation: miAnimacion 12s ease-in 6s infinite;
+    -moz-animation: miAnimacion 12s ease-in 6s infinite; }
+  .pseudoCarousel #fondo3 {
+    background: url(../multimedia/depilacion.jpg);
+    background-position: center;
+    background-size: cover; }
+  .pseudoCarousel #fondo4 {
+    background: url(../multimedia/cooltech.png);
+    background-position: center;
+    background-size: cover; }
+  .sectionP, .sectionP2 {
+    background-color: #81B622;
+    width: 100vw;
+    height: 92vh;
+    margin-top: 8vh;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 100% 0 100% / 20%; }
+    .sectionP .tituloSectionP, .sectionP2 .tituloSectionP {
+      margin-top: 4vh;
+      padding: 0 2vw; }
+    .sectionP .sectionP__texto, .sectionP2 .sectionP__texto {
+      color: #ECF87F;
+      text-align: center;
+      padding: 2vh 5vw; }
+    .sectionP .sectionP__texto1, .sectionP2 .sectionP__texto1 {
+      color: #3D550C;
+      text-align: center;
+      padding: 2vh 6vw; }
+  p {
+    font-family: "Cormorant Upright", serif;
+    font-size: 3vw;
+    word-spacing: 0.2vw;
+    line-height: 2.5vw;
+    text-align: center; }
+  /* DISEÑOS DE CARDS */
+  .backgroundColor {
+    width: 90vw;
+    height: 45vh;
+    border: none;
+    margin: 3vh 2vw 5vh 2vw;
+    background-color: #81B622;
+    border-radius: 0 100% 0 100% / 30%; }
+    .backgroundColor .imgUp {
+      width: 100%;
+      height: 60vh;
+      border-radius: 100% 0 100% 0 / 30%;
+      border: 10px solid #ECF87F;
+      background-position: center;
+      background-size: cover; }
+  .card {
+    border-radius: 100% 0 100% 0 / 30%;
+    border: 10px solid #81B622 !important;
+    background-color: #ECF87F;
+    width: 100%;
+    height: 45vh;
+    text-align: start;
+    padding: 1vh 0;
+    margin-right: 3vw; }
+  /* IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
+  .imgCorporal, .imgFacial {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 60vh;
+    box-shadow: inset 0.4em 0.4em 0.4em 4em rgba(0, 0, 0, 0.8), 0.4em 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.8); }
+  .imgCorporal {
+    background-image: url("../multimedia/background.jpg");
+    border-radius: 100% 0 0 0 / 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .imgFacial {
+    background-image: url("../multimedia/tratamiento-facial-natural.webp");
+    border-radius: 100% 0  0 0 / 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  /* FIN IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
+  /* CONTACTO */
+  form {
+    font-family: "Cormorant Upright", serif;
+    font-size: 3vh;
+    margin: 10vh 10vw 10vh;
+    color: #81B622; }
+    form .closestSchool {
+      display: flex;
+      justify-content: space-between; }
+  .infoMap {
+    display: flex;
+    margin-left: 2vw; }
+    .infoMap iframe {
+      border-radius: 10%;
+      background-size: 20vw 20vh; }
+  /* FIN CONTACTO */
+  /* FOOTER */
+  footer {
+    width: 100vw;
+    height: 35vh; }
+  /* FIN FOOTER */
+  .grid {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header header" "titulo titulo" "principal principal" "cinco cinco" "sectionP2 sectionP2"     "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+    .grid header {
+      grid-area: header; }
+    .grid h1 {
+      grid-area: titulo; }
+    .grid section.sectionP2 {
+      grid-area: sectionP2; }
+    .grid section.cinco {
+      grid-area: cinco; }
+    .grid .pseudoCarousel {
+      grid-area: pseudoCarousel; }
+    .grid .principal {
+      grid-area: principal; }
+    .grid .sectionP {
+      grid-area: sectionP; }
+    .grid .infoCards {
+      grid-area: infoCards; }
+    .grid .infoCards2 {
+      grid-area: infoCards2; }
+    .grid footer {
+      grid-area: footer; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  header {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 100% 0 / 30%;
+    background-image: linear-gradient(135deg, #81B622 10%, #3D550C 100%);
+    box-shadow: inset 0 -0.5em 1em rgba(0, 0, 0, 0.4), 0 0 0 2px #ECF87F, 0.5em 0.5em 2.5em black; }
+    header .header__titulo {
+      font-family: "Cormorant Upright", serif;
+      font-weight: bold;
+      font-size: 4vw;
+      word-spacing: 0.1vw;
+      color: #3D550C;
+      text-transform: capitalize;
+      padding: 1vw;
+      margin: 1vh 0;
+      text-align: center;
+      text-shadow: #59981A;
+      transition: transform 2s;
+      animation: aparecer 5s ease-in-out infinite; }
+    header .header__titulo:hover {
+      font-size: 4.01vw;
+      transform: translateY(-1.2vh); }
+  @keyframes aparecer {
+    0% {
+      color: #81B622; }
+    25% {
+      color: #59981A; }
+    50% {
+      color: #3D550C; }
+    100% {
+      color: #81B622; } }
+  nav {
+    width: 100vw;
+    height: 10vh;
+    margin: 1vh 3vw 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    justify-content: space-around; }
+    nav a {
+      font-family: "Cormorant Upright", serif;
+      font-weight: bold;
+      color: #ECF87F;
+      font-size: 2vw;
+      text-transform: capitalize;
+      text-align: center;
+      margin-left: 1vw;
+      transition: transform 1s;
+      border-bottom: 4px solid white;
+      border-radius: 15%;
+      text-decoration: none; }
+    nav a:hover {
+      border-bottom: 4px solid #ECF87F;
+      text-decoration: none;
+      color: white;
+      transform: translateY(-1.2vh);
+      box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px fadeout(#3D550C, 75), 0 83px 4px 0px fadeout(#3D550C, 5); }
+    nav a:active {
+      font-family: "Cormorant Upright", serif;
+      font-weight: bold;
+      color: #ECF87F;
+      font-size: 1.9vw;
+      text-transform: capitalize;
+      text-align: center;
+      margin-left: 1vw; }
+  /* CAROUSEL */
+  @keyframes miAnimacion {
+    0% {
+      opacity: 1; }
+    40% {
+      opacity: 1; }
+    50% {
+      opacity: 1; }
+    60% {
+      opacity: 0; }
+    70% {
+      opacity: 0; }
+    100% {
+      opacity: 0; } }
+  @-webkit-keyframes miAnimacion {
+    0% {
+      opacity: 1; }
+    40% {
+      opacity: 1; }
+    50% {
+      opacity: 1; }
+    60% {
+      opacity: 0; }
+    70% {
+      opacity: 0; }
+    100% {
+      opacity: 0; } }
+  @-moz-keyframes miAnimacion {
+    0% {
+      opacity: 1; }
+    40% {
+      opacity: 1; }
+    50% {
+      opacity: 1; }
+    60% {
+      opacity: 0; }
+    70% {
+      opacity: 0; }
+    100% {
+      opacity: 0; } }
+  .pseudoCarousel #fondo1, .pseudoCarousel #fondo3 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url(../multimedia/home-black.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80% 0 80% 0 / 20%;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    animation: miAnimacion 12s ease-in 0s infinite;
+    -webkit-animation: miAnimacion 12s ease-in 0s infinite;
+    -moz-animation: miAnimacion 12s ease-in 0s infinite; }
+  .pseudoCarousel #fondo2, .pseudoCarousel #fondo4 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../multimedia/home-2-black.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80% 0 80% 0 / 20%;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    animation: miAnimacion 12s ease-in 6s infinite;
+    -webkit-animation: miAnimacion 12s ease-in 6s infinite;
+    -moz-animation: miAnimacion 12s ease-in 6s infinite; }
+  .pseudoCarousel #fondo3 {
+    background: url(../multimedia/depilacion.jpg);
+    background-position: center;
+    background-size: cover; }
+  .pseudoCarousel #fondo4 {
+    background: url(../multimedia/cooltech.png);
+    background-position: center;
+    background-size: cover; }
+  /* FIN CAROUSEL */
+  .palabraMargen {
+    font-family: "Cormorant Upright", serif;
+    color: #81B622;
+    font-size: 7vw;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 10vh 0; }
+  .palabraMargen1 {
+    font-family: "Cormorant Upright", serif;
+    color: #3D550C;
+    font-size: 7vw;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin: 10vh 0; }
+  /* IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
+  .imgCorporal, .imgFacial {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 90vh;
+    box-shadow: inset 0.4em 0.4em 0.4em 4em rgba(0, 0, 0, 0.8), 0.4em 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.8);
+    opacity: .8; }
+  .imgCorporal {
+    background-image: url("../multimedia/background.jpg");
+    border-radius: 100% 0 0 0 / 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .imgFacial {
+    background-image: url("../multimedia/tratamiento-facial-natural.webp");
+    border-radius: 100% 0  0 0 / 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; }
+  /* FIN IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
+  /* CARACTERISTICAS TIPOGRAFICAS */
+  h1 {
+    font-family: "Cormorant Upright", serif;
+    color: #81B622;
+    text-shadow: 0.2vw 0.2vh #59981A;
+    font-size: 5vw;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center;
+    margin-bottom: 10vh; }
+  h2, h3 {
+    font-family: "Cormorant Upright", serif;
+    color: #3D550C;
+    font-weight: bold;
+    word-spacing: 0.1vw;
+    text-align: center;
+    text-shadow: 1px 1px #ECF87F; }
+  h4 {
+    font-family: "Cormorant Upright", serif;
+    color: #ECF87F;
+    text-align: center; }
+  h5 {
+    font-family: "Cormorant Upright", serif;
+    color: #ECF87F;
+    text-align: center; }
+  p {
+    font-family: "Cormorant Upright", serif;
+    font-size: 1.7vw;
+    word-spacing: 0.1vw;
+    line-height: 2vw;
+    text-align: center; }
+  /* FIN CARACTERISTICAS TIPOGRAFICAS */
+  /* DISEÑOS DE CARDS */
+  .backgroundColor {
+    width: 100vw;
+    height: 55vh;
+    border: none;
+    margin: 3vh 2vw 5vh 2vw;
+    background-color: #81B622;
+    border-radius: 0 100% 0 100% / 30%; }
+    .backgroundColor .imgUp {
+      width: 100%;
+      height: 40vh;
+      border-radius: 100% 0 100% 0 / 30%;
+      border: 10px solid #ECF87F;
+      background-position: center;
+      background-size: cover; }
+  .card {
+    border-radius: 100% 0 100% 0 / 30%;
+    border: 10px solid #81B622 !important;
+    background-color: #ECF87F;
+    width: 100%;
+    height: 60vh;
+    text-align: start;
+    padding: 1vh 0;
+    margin-right: 3vw; }
+  .btn {
+    border-radius: 100% 0 100% 0 / 30%;
+    background-color: #59981A;
+    border: 2px solid #81B622 !important; }
+  /* FIN DISEÑOS DE CARDS */
+  /* INDEX */
+  .sectionP, .sectionP2 {
+    background-color: #81B622;
+    width: 100vw;
+    height: 95vh;
+    /*  */
+    margin: 10vh 0;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 100% 0 100% / 20%;
+    padding: 4vh 2vw;
+    /*  */ }
+    .sectionP .tituloSectionP, .sectionP2 .tituloSectionP {
+      margin-top: 2vh;
+      padding: 1vh 10vw; }
+    .sectionP .sectionP__texto, .sectionP2 .sectionP__texto {
+      color: #ECF87F;
+      text-align: center;
+      padding: 2vh 5vw; }
+      .sectionP .sectionP__texto .sectionP__texto1, .sectionP2 .sectionP__texto .sectionP__texto1 {
+        color: #3D550C;
+        text-align: center;
+        padding: 2vh 6vw; }
+    .sectionP p, .sectionP2 p {
+      font-family: "Cormorant Upright", serif;
+      font-size: 2.4vw;
+      word-spacing: 0.2vw;
+      line-height: 2.5vw;
+      text-align: center; }
+  /* FIN INDEX */
+  /* NOSOTROS */
+  .sectionP2 {
+    background-color: #81B622;
+    width: 94vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
+    margin: 10vh 10vh;
+    border-radius: 1% 100% 1% 100% / 20%; }
+  .cinco {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 40vh;
+    margin-bottom: 10vh;
+    position: relative;
+    padding-bottom: 5vh; }
+  .cincoSeis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh 4vw 1vh 4vw;
+    width: 33%;
+    height: 100vh; }
+  .cincoSeis img {
+    border-radius: 100%;
+    border: 8px solid #ECF87F; }
+  .cincoSeis .nombre {
+    font-weight: 500;
+    color: #3D550C;
+    font-size: 2vw;
+    text-transform: capitalize;
+    margin: 5vh 0; }
+  .cincoSeis .matricula {
+    font-weight: 400;
+    color: #59981A;
+    font-size: 1.5vw;
+    text-transform: uppercase; }
+  img {
+    border-radius: 100% 0 0 0 / 30%; }
+  /* CONTACTO */
+  form {
+    font-family: "Cormorant Upright", serif;
+    font-size: 3vh;
+    margin: 10vh 18vw 10vh;
+    color: #81B622; }
+    form .location, form .signDate, form .nameDatePhon {
+      display: flex;
+      flex-direction: row; }
+    form input {
+      padding: 1vh 2vw 0 2vw;
+      margin: 0 1vw 0 0.5vw;
+      border: none;
+      background-color: #ECF87F;
+      color: #3D550C; }
+    form .closestSchool, form .positionPlay, form .size, form .signDate {
+      display: flex; }
+    form .wholeLine1 {
+      margin-left: 5vw; }
+    form .wholeLine input {
+      width: 76%; }
+    form .location input {
+      width: 20.5vw; }
+    form .closestSchool {
+      display: flex;
+      justify-content: space-between; }
+  div {
+    margin-bottom: 1vh; }
+  div p {
+    margin-bottom: 2vh; }
+  .horarioAtencion {
+    text-align: center; }
+  iframe {
+    border-radius: 10%;
+    width: 40vw;
+    height: 50vh;
+    border: 4px solid #59981A;
+    margin-right: 5vw; }
+  /* FIN CONTACTO */
+  .infoImportant {
+    padding: 2vw; }
+  /* FOOTER */
+  footer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 100% 0 0 0 / 30%;
+    background: #ECF87F;
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 -0.5em 1em rgba(0, 0, 0, 0.4), 0 0 0 2px #59981A, 0.5em 0.5em 2.5em black; }
+    footer div p {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    footer .logoTiny {
+      width: 15%;
+      height: 15%;
+      padding: 2vh 2vh 2vw;
+      border-radius: 0; }
+    footer div.social-media-links {
+      overflow: hidden;
+      padding-top: 2vh;
+      text-align: center; }
+      footer div.social-media-links ul {
+        margin: 0;
+        padding: 0; }
+      footer div.social-media-links li {
+        display: inline;
+        margin: 0;
+        padding: 0; }
+      footer div.social-media-links a {
+        border-bottom: 0px solid rgba(0, 0, 0, 0.95);
+        border-radius: 4px;
+        box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0), 0 6px 8px rgba(0, 0, 0, 0), 0 24px 24px rgba(0, 0, 0, 0), 0 36px 36px rgba(0, 0, 0, 0), 0 64px 64px rgba(0, 0, 0, 0), 0 64px 128px rgba(0, 0, 0, 0), 0 120px 0 rgba(0, 0, 0, 0), 0 86px 8px 6px rgba(0, 0, 0, 0);
+        display: inline-block;
+        height: 10vh;
+        padding: 20px;
+        position: relative;
+        transition: .2s ease-in;
+        width: 10vw; }
+        footer div.social-media-links a svg {
+          left: -0.5vw;
+          position: absolute;
+          top: 6vh;
+          width: 10vw;
+          height: 10vh; }
+          footer div.social-media-links a svg.glow path, footer div.social-media-links a svg.glow circle {
+            fill: rgba(0, 0, 0, 0); }
+          footer div.social-media-links a svg path, footer div.social-media-links a svg circle, footer div.social-media-links a svg .logoTiny {
+            fill: #3D550C;
+            transition: .2s ease-in; }
+      footer div.social-media-links a:hover, footer div.social-media-links div p #as:hover {
+        transform: translateY(-4px);
+        box-shadow: inset 0 -3px 0 0 rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.05), 0 24px 24px rgba(0, 0, 0, 0.05), 0 36px 36px rgba(0, 0, 0, 0.05), 0 64px 64px rgba(0, 0, 0, 0.15), 0 64px 128px rgba(0, 0, 0, 0.15), 0 86px 8px 6px fadeout(#3D550C, 75), 0 83px 4px 0px fadeout(#3D550C, 5); }
+        footer div.social-media-links a:hover svg.glow, footer div.social-media-links div p #as:hover svg.glow {
+          filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><f…ter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
+          filter: blur(2px); }
+          footer div.social-media-links a:hover svg.glow path, footer div.social-media-links a:hover svg.glow circle, footer div.social-media-links div p #as:hover svg.glow path, footer div.social-media-links div p #as:hover svg.glow circle {
+            fill: fadeout(#3D550C, 40); }
+        footer div.social-media-links a:hover svg path, footer div.social-media-links a:hover svg circle, footer div.social-media-links div p #as:hover svg path, footer div.social-media-links div p #as:hover svg circle {
+          fill: #59981A; }
+  #as {
+    font-family: "Cormorant Upright", serif;
+    font-weight: bold;
+    color: #3D550C;
+    font-size: 1.5vw;
+    text-transform: capitalize;
+    text-align: center;
+    margin-left: 0.5vw;
+    transition: transform 1s;
+    border-bottom: 4px solid #81B622;
+    text-decoration: none; }
+  #as:hover {
+    border-bottom: 4px solid white;
+    text-decoration: none;
+    color: #59981A;
+    transform: translateY(-1.2vh); }
+  /* FIN FOOTER */
+  /* GRID */
+  .grid {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header" "titulo titulo" "principal principal" "cinco cinco" "sectionP2 sectionP2"     "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+    .grid header {
+      grid-area: header; }
+    .grid h1 {
+      grid-area: titulo; }
+    .grid section.sectionP2 {
+      grid-area: sectionP2; }
+    .grid section.cinco {
+      grid-area: cinco; }
+    .grid .pseudoCarousel {
+      grid-area: pseudoCarousel; }
+    .grid .principal {
+      grid-area: principal; }
+    .grid .sectionP {
+      grid-area: sectionP; }
+    .grid .infoCards {
+      grid-area: infoCards; }
+    .grid .infoCards2 {
+      grid-area: infoCards2; }
+    .grid footer {
       grid-area: footer; } }
