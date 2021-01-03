@@ -352,8 +352,7 @@ p {
       text-align: center;  
       padding: 2vh 3vw ;
     }
-  }  
-         
+  }      
 }
   /* FIN INDEX */
   
@@ -572,7 +571,7 @@ footer {
 
 .grid {
   display: grid; 
-  @include sizes(100vw, 100vh);
+  @include sizes(100%, 100%);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;   
   grid-template-columns:1fr 1fr;
   
@@ -581,8 +580,8 @@ footer {
     "titulo titulo"
     "principal principal"
     "cinco cinco"
-    "sectionP2 sectionP2"    
-    "pseudoCarousel pseudoCarousel"            
+    "pseudoCarousel pseudoCarousel"  
+    "sectionP2 sectionP2"
     "sectionP sectionP"       
     "infoCards infoCards"
     "infoCards2 infoCards2"
