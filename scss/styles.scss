@@ -329,7 +329,7 @@ p {
 /* FIN DISEÑOS DE CARDS */
 
   /* INDEX */
-    .sectionP{
+    .sectionP, .sectionP2{
       background-color: $color-inst1;
       @include sizes(100vw, 86vh);       
       margin: 10vh 0;      
@@ -359,34 +359,53 @@ p {
   /* FIN INDEX */
   
   /* NOSOTROS */
-  
+  .sectionP2{
+    background-color: $color-inst1;
+    @include sizes(90vw, 80vh); 
+    display: flex;
+    justify-content: center;
+    align-items: center;           
+    box-shadow: inset .6em .6em 2.5em rgba(0,0,0,.6), .6em .6em 2.5em rgba(0,0,0,.6); 
+    margin: 10vh 10vh;
+    border-radius: 1% 100% 1% 100% / 20%;     
+  }
   .cinco{
     display: flex;
-    flex-wrap: wrap;          
+    flex-wrap: wrap;
+    @include sizes(100vw, 40vh); 
+    margin-bottom: 10vh;
+    position: relative;
+    padding-bottom: 5vh;   
+    }    
     .cincoSeis{      
         display: flex;
         flex-direction: column;    
         align-items: center;
         padding: 1vh 4vw 1vh 4vw;
         @include sizes(33%, 100vh); 
-    }    
-     img{
+    }
+    
+    .cincoSeis img{
         border-radius: 100%;
         border: 8px solid $color-inst4;
     }
-    .nombre {        
+    .cincoSeis .nombre {        
         font-weight: 500;
         color: $color-inst3;
         font-size: 2vw;
         text-transform: capitalize; 
+        margin:5vh 0;
     }
-    .matricula {        
+    .cincoSeis .matricula {        
         font-weight: 400;
         color:$color-inst2;
         font-size: 1.5vw;
         text-transform: uppercase;         
     }
-  }   
+    img{
+      border-radius: 100% 0 0 0 / 30%; 
+    }
+      
 /* CONTACTO */
 form {
   font-family: "Cormorant Upright", serif;
@@ -555,7 +574,8 @@ footer {
 
 .grid {
   display: grid; 
-  @include sizes(100vw, 100vh); 
+  @include sizes(100vw, 100vh);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;   
   grid-template-columns:1fr 1fr;
   
   grid-template-areas:
@@ -995,14 +1015,14 @@ footer {
   display: grid; 
   @include sizes(100vw, 100vh);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;   
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr;
   
   grid-template-areas:
     "header header"
     "titulo titulo"
     "principal principal"
-    "sectionP2 sectionP2"
-    "cinco cinco"        
+    "cinco cinco"
+    "sectionP2 sectionP2"    
     "pseudoCarousel pseudoCarousel"            
     "sectionP sectionP"       
     "infoCards infoCards"
@@ -1368,8 +1388,8 @@ footer {
     "header header"
     "titulo titulo"
     "principal principal"
-    "sectionP2 sectionP2" 
-    "cinco cinco"       
+    "cinco cinco"
+    "sectionP2 sectionP2"    
     "pseudoCarousel pseudoCarousel"            
     "sectionP sectionP"       
     "infoCards infoCards"
@@ -1769,13 +1789,18 @@ footer {
       justify-content: center;
       align-items: center;           
       box-shadow: inset .6em .6em 2.5em rgba(0,0,0,.6), .6em .6em 2.5em rgba(0,0,0,.6); 
-      margin: 10vh 0;
+      margin: 10vh 10vh;
       border-radius: 1% 100% 1% 100% / 20%;     
     }
   
     .cinco{
       display: flex;
-      flex-wrap: wrap;          
+      flex-wrap: wrap;
+      @include sizes(100vw, 40vh); 
+      margin-bottom: 10vh;
+      position: relative;
+      padding-bottom: 5vh;   
+      }    
       .cincoSeis{      
           display: flex;
           flex-direction: column;    
@@ -1783,24 +1808,27 @@ footer {
           padding: 1vh 4vw 1vh 4vw;
           @include sizes(33%, 70vh); 
       }    
-       img{
+      .cincoSeis img{
           border-radius: 100%;
           border: 8px solid $color-inst4;
       }
-      .nombre {        
+      .cincoSeis .nombre {        
           font-weight: 500;
           color: $color-inst3;
           font-size: 2vw;
           text-transform: capitalize; 
           margin:5vh 0;
       }
-      .matricula {        
+      .cincoSeis .matricula {        
           font-weight: 400;
           color:$color-inst2;
           font-size: 1.5vw;
           text-transform: uppercase;         
       }
-    }   
+      img{
+        border-radius: 100% 0 0 0 / 30%; 
+      }
+        
   /* CONTACTO */
   form {
     font-family: "Cormorant Upright", serif;
