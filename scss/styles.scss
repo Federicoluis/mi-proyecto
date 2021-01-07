@@ -547,8 +547,7 @@ footer {
 
 .grid {
   display: grid; 
-  @include sizes(100vw, 100vh);
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;   
+  @include sizes(100vw, 100vh); 
   grid-template-columns:1fr 1fr;
   
   grid-template-areas:
@@ -970,7 +969,7 @@ footer {
   display: grid; 
   @include sizes(100vw, 100vh);
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;   
-  grid-template-columns:1fr;
+  grid-template-columns:1fr 1fr;
   
   grid-template-areas:
     "header header"
