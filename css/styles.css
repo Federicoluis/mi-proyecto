@@ -473,11 +473,20 @@ footer {
 /* GRID */
 .grid {
   display: grid;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "header header" "titulo titulo" "principal principal" "cinco cinco" "pseudoCarousel pseudoCarousel"   "sectionP2 sectionP2" "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+  grid-template-areas: "header header"
+ "titulo titulo"
+ "principal principal"
+ "cinco cinco"
+ "pseudoCarousel pseudoCarousel"  
+ "sectionP2 sectionP2"
+ "sectionP sectionP"       
+ "infoCards infoCards"
+ "infoCards2 infoCards2"
+ "footer footer"; }
   .grid header {
     grid-area: header; }
   .grid h1 {
@@ -809,7 +818,16 @@ footer {
     height: 100vh;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: "header header" "titulo titulo" "principal principal" "sectionP2 sectionP2" "cinco cinco"         "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+    grid-template-areas: "header header"
+ "titulo titulo"
+ "principal principal"
+ "sectionP2 sectionP2"
+ "cinco cinco"        
+ "pseudoCarousel pseudoCarousel"            
+ "sectionP sectionP"       
+ "infoCards infoCards"
+ "infoCards2 infoCards2"
+ "footer footer"; }
     .grid header {
       grid-area: header; }
     .grid h1 {
@@ -1066,7 +1084,16 @@ footer {
     height: 100vh;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: "header header" "titulo titulo" "principal principal" "sectionP2 sectionP2"  "cinco cinco"        "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+    grid-template-areas: "header header"
+ "titulo titulo"
+ "principal principal"
+ "sectionP2 sectionP2" 
+ "cinco cinco"       
+ "pseudoCarousel pseudoCarousel"            
+ "sectionP sectionP"       
+ "infoCards infoCards"
+ "infoCards2 infoCards2"
+ "footer footer"; }
     .grid header {
       grid-area: header; }
     .grid h1 {
@@ -1538,7 +1565,16 @@ footer {
     height: 100vh;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "header header" "titulo titulo" "principal principal" "cinco cinco" "sectionP2 sectionP2"     "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+    grid-template-areas: "header header"
+ "titulo titulo"
+ "principal principal"
+ "cinco cinco"
+ "sectionP2 sectionP2"    
+ "pseudoCarousel pseudoCarousel"            
+ "sectionP sectionP"       
+ "infoCards infoCards"
+ "infoCards2 infoCards2"
+ "footer footer"; }
     .grid header {
       grid-area: header; }
     .grid h1 {
