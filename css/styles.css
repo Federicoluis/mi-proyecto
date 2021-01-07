@@ -376,11 +376,15 @@ div p {
 .horarioAtencion {
   text-align: center; }
 
-iframe {
-  border-radius: 10%;
-  width: 40vw;
-  height: 50vh;
-  border: 4px solid #59981A; }
+.infoMap {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+  .infoMap iframe {
+    border-radius: 10%;
+    width: 40vw;
+    height: 50vh;
+    border: 4px solid #59981A; }
 
 /* FIN CONTACTO */
 .infoImportant {
@@ -787,20 +791,35 @@ footer {
     font-size: 3vh;
     margin: 10vh 10vw 10vh;
     color: #81B622; }
+    form .location, form .signDate, form .nameDatePhon {
+      display: flex;
+      flex-direction: column; }
     form .closestSchool {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between; }
   .infoMap {
     display: flex;
-    margin-left: 2vw; }
+    margin-left: 2vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     .infoMap iframe {
       border-radius: 10%;
-      background-size: 20vw 20vh; }
+      width: 100%;
+      height: 100%; }
   /* FIN CONTACTO */
   /* FOOTER */
   footer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 100% 0 0 0 / 30%;
+    background: #ECF87F;
     width: 100vw;
     height: 30vh; }
+    footer .logoTiny {
+      width: 30%;
+      height: 30%; }
   /* FIN FOOTER */
   .grid {
     display: grid;
@@ -968,7 +987,7 @@ footer {
   .sectionP, .sectionP2 {
     background-color: #81B622;
     width: 100vw;
-    height: 92vh;
+    height: 72vh;
     margin-top: 8vh;
     box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
     display: flex;
@@ -1013,7 +1032,7 @@ footer {
     border: 10px solid #81B622 !important;
     background-color: #ECF87F;
     width: 100%;
-    height: 45vh;
+    height: 35vh;
     text-align: start;
     padding: 1vh 0;
     margin-right: 3vw; }
@@ -1038,26 +1057,64 @@ footer {
     justify-content: center;
     align-items: center; }
   /* FIN IMAGEN PRINCIPAL: PAGES => TRATAMIENTO CORPORAL Y FACIAL */
+  .cinco {
+    display: flex;
+    flex-wrap: wrap; }
+    .cinco .cincoSeis {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1vh 4vw 1vh 4vw;
+      width: 31vw;
+      height: 60vh; }
+    .cinco img {
+      border-radius: 100%;
+      border: 8px solid #ECF87F; }
+    .cinco .nombre {
+      font-weight: 500;
+      color: #3D550C;
+      font-size: 2vw;
+      text-transform: capitalize; }
+    .cinco .matricula {
+      font-weight: 400;
+      color: #59981A;
+      font-size: 1.5vw;
+      text-transform: uppercase; }
   /* CONTACTO */
   form {
     font-family: "Cormorant Upright", serif;
     font-size: 3vh;
     margin: 10vh 10vw 10vh;
     color: #81B622; }
+    form .location, form .signDate, form .nameDatePhon {
+      display: flex;
+      flex-direction: column; }
     form .closestSchool {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between; }
   .infoMap {
     display: flex;
-    margin-left: 2vw; }
+    margin-left: 2vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
     .infoMap iframe {
       border-radius: 10%;
-      background-size: 20vw 20vh; }
+      width: 100%;
+      height: 100%; }
   /* FIN CONTACTO */
   /* FOOTER */
   footer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 100% 0 0 0 / 30%;
+    background: #ECF87F;
     width: 100vw;
     height: 35vh; }
+    footer .logoTiny {
+      width: 30%;
+      height: 30%; }
   /* FIN FOOTER */
   .grid {
     display: grid;
