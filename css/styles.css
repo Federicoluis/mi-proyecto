@@ -290,7 +290,7 @@ p {
 
 /* FIN DISEÑOS DE CARDS */
 /* INDEX */
-.sectionP, .sectionP2 {
+.sectionP {
   background-color: #81B622;
   width: 100vw;
   height: 86vh;
@@ -302,67 +302,43 @@ p {
   flex-direction: column;
   border-radius: 0 100% 0 100% / 20%;
   padding: 5vh 2vw; }
-  .sectionP .tituloSectionP, .sectionP2 .tituloSectionP {
+  .sectionP .tituloSectionP {
     margin-top: 4vh;
     padding: 2vh 10vw; }
-  .sectionP .sectionP__texto, .sectionP2 .sectionP__texto {
+  .sectionP .sectionP__texto {
     color: #ECF87F;
     text-align: center;
     padding: 2vh 5vw; }
-  .sectionP .sectionP__texto1, .sectionP2 .sectionP__texto1 {
+  .sectionP .sectionP__texto1 {
     color: #3D550C;
     text-align: center;
     padding: 2vh 6vw; }
 
 /* FIN INDEX */
 /* NOSOTROS */
-.sectionP2 {
-  background-color: #81B622;
-  width: 90vw;
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
-  margin: 10vh 10vh;
-  border-radius: 1% 100% 1% 100% / 20%; }
-
 .cinco {
   display: flex;
-  flex-wrap: wrap;
-  width: 100vw;
-  height: 40vh;
-  margin-bottom: 10vh;
-  position: relative;
-  padding-bottom: 5vh; }
-
-.cincoSeis {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1vh 4vw 1vh 4vw;
-  width: 33%;
-  height: 100vh; }
-
-.cincoSeis img {
-  border-radius: 100%;
-  border: 8px solid #ECF87F; }
-
-.cincoSeis .nombre {
-  font-weight: 500;
-  color: #3D550C;
-  font-size: 2vw;
-  text-transform: capitalize;
-  margin: 5vh 0; }
-
-.cincoSeis .matricula {
-  font-weight: 400;
-  color: #59981A;
-  font-size: 1.5vw;
-  text-transform: uppercase; }
-
-img {
-  border-radius: 100% 0 0 0 / 30%; }
+  flex-wrap: wrap; }
+  .cinco .cincoSeis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vh 4vw 1vh 4vw;
+    width: 33%;
+    height: 100vh; }
+  .cinco img {
+    border-radius: 100%;
+    border: 8px solid #ECF87F; }
+  .cinco .nombre {
+    font-weight: 500;
+    color: #3D550C;
+    font-size: 2vw;
+    text-transform: capitalize; }
+  .cinco .matricula {
+    font-weight: 400;
+    color: #59981A;
+    font-size: 1.5vw;
+    text-transform: uppercase; }
 
 /* CONTACTO */
 form {
@@ -503,7 +479,6 @@ footer {
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "header header" "titulo titulo" "principal principal" "cinco cinco" "sectionP2 sectionP2"     "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
   .grid header {
@@ -851,8 +826,8 @@ footer {
     width: 100vw;
     height: 100vh;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "header header" "titulo titulo" "principal principal" "cinco cinco" "sectionP2 sectionP2"     "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header" "titulo titulo" "principal principal" "sectionP2 sectionP2" "cinco cinco"         "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
     .grid header {
       grid-area: header; }
     .grid h1 {
@@ -1149,7 +1124,7 @@ footer {
     height: 100vh;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: "header header" "titulo titulo" "principal principal" "cinco cinco" "sectionP2 sectionP2"     "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
+    grid-template-areas: "header header" "titulo titulo" "principal principal" "sectionP2 sectionP2"  "cinco cinco"        "pseudoCarousel pseudoCarousel"             "sectionP sectionP"        "infoCards infoCards" "infoCards2 infoCards2" "footer footer"; }
     .grid header {
       grid-area: header; }
     .grid h1 {
@@ -1466,39 +1441,32 @@ footer {
     justify-content: center;
     align-items: center;
     box-shadow: inset 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6), 0.6em 0.6em 2.5em rgba(0, 0, 0, 0.6);
-    margin: 10vh 10vh;
+    margin: 10vh 0;
     border-radius: 1% 100% 1% 100% / 20%; }
   .cinco {
     display: flex;
-    flex-wrap: wrap;
-    width: 100vw;
-    height: 40vh;
-    margin-bottom: 10vh;
-    position: relative;
-    padding-bottom: 5vh; }
-  .cincoSeis {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1vh 4vw 1vh 4vw;
-    width: 33%;
-    height: 70vh; }
-  .cincoSeis img {
-    border-radius: 100%;
-    border: 8px solid #ECF87F; }
-  .cincoSeis .nombre {
-    font-weight: 500;
-    color: #3D550C;
-    font-size: 2vw;
-    text-transform: capitalize;
-    margin: 5vh 0; }
-  .cincoSeis .matricula {
-    font-weight: 400;
-    color: #59981A;
-    font-size: 1.5vw;
-    text-transform: uppercase; }
-  img {
-    border-radius: 100% 0 0 0 / 30%; }
+    flex-wrap: wrap; }
+    .cinco .cincoSeis {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1vh 4vw 1vh 4vw;
+      width: 33%;
+      height: 70vh; }
+    .cinco img {
+      border-radius: 100%;
+      border: 8px solid #ECF87F; }
+    .cinco .nombre {
+      font-weight: 500;
+      color: #3D550C;
+      font-size: 2vw;
+      text-transform: capitalize;
+      margin: 5vh 0; }
+    .cinco .matricula {
+      font-weight: 400;
+      color: #59981A;
+      font-size: 1.5vw;
+      text-transform: uppercase; }
   /* CONTACTO */
   form {
     font-family: "Cormorant Upright", serif;
